@@ -1,5 +1,7 @@
 ![Wiro Logo](http://wiro.ai/images/logos/logo/logo.png)
 
+<img src="http://wiro.ai/images/logos/logo/logo.png" alt="Wiro Logo" width="100"/>
+
 # n8n-nodes-wiroai
 
 This is an [n8n](https://n8n.io) community node that lets you access [Wiro AI](https://wiro.ai)’s generative AI tools directly in your workflows.
