@@ -2,7 +2,9 @@
 	"node": "wiroaiGenerateSpeechTts",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["AI", "Text to Speech"],
+	"icon": "wiro.svg",
+	"description": "Converts text to speech using Wiro AI",
+	"categories": ["AI", "Action in an app", "Text to Speech", "Audio"],
 	"resources": {
 		"primaryDocumentation": [
 			{

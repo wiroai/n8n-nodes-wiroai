@@ -19,10 +19,11 @@ export class GenerateSpeechTTS implements INodeType {
 		version: 1,
 		description: 'Converts text to speech using Wiro AI',
 		defaults: {
-			name: 'Generate Speech',
+			name: 'Wiro - Generate Speech',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
+		usableAsTool: true,
 		credentials: [
 			{
 				name: 'wiroApi',
@@ -36,6 +37,7 @@ export class GenerateSpeechTTS implements INodeType {
 				type: 'string',
 				default: '',
 				required: true,
+				description: 'The text prompt to convert into speech audio',
 			},
 			{
 				displayName: 'Voice',
@@ -50,6 +52,7 @@ export class GenerateSpeechTTS implements INodeType {
 				],
 				default: 'af_heart',
 				required: true,
+				description: 'Choose a voice character for the generated speech',
 			},
 			{
 				displayName: 'Language',
@@ -66,6 +69,7 @@ export class GenerateSpeechTTS implements INodeType {
 				],
 				default: 'a',
 				required: true,
+				description: 'Select the language variant for the spoken output',
 			},
 		],
 	};
@@ -108,7 +112,7 @@ export class GenerateSpeechTTS implements INodeType {
 				});
 			}
 
-			// 2. Task tamamlanana kadar bekle
+			// wait until task result
 			const result = await pollTaskUntilComplete.call(this, socketaccesstoken, headers);
 
 			let responseJSON = {
