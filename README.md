@@ -1,6 +1,4 @@
-![Wiro Logo](http://wiro.ai/images/logos/logo/logo.png)
-
-<img src="http://wiro.ai/images/logos/logo/logo.png" alt="Wiro Logo" width="100"/>
+<img src="http://wiro.ai/images/logos/logo/logo.png" alt="Wiro Logo" width="200"/>
 
 # n8n-nodes-wiroai
 
