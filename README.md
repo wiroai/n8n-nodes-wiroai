@@ -4,6 +4,8 @@
 
 This is an [n8n](https://n8n.io) community node that lets you access [Wiro AI](https://wiro.ai)’s generative AI tools directly in your workflows.
 
+<img src="https://wiro.ai/images/illustrations/koala-404.png" alt="Wiro Logo" width="50"/>
+
 ## ✨ Features
 
 - 🗣️ Text-to-Speech
