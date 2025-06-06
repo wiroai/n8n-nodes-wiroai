@@ -6,17 +6,18 @@
 		"n8n-community-node-package"
 	],
 	"license": "MIT",
-	"homepage": "",
+	"description": "Community node for Wiro AI's Generative AI APIs.",
 	"author": {
-		"name": "",
-		"email": ""
+		"name": "Wiro AI",
+		"email": "support@wiro.ai"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/<...>/n8n-nodes-<...>.git"
+		"url": "https://github.com/wiroai/n8n-nodes-wiroai.git"
 	},
+	"homepage": "https://wiro.ai",
 	"engines": {
-		"node": ">=20.15"
+		"node": ">=18"
 	},
 	"main": "index.js",
 	"scripts": {
@@ -33,15 +34,14 @@
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"credentials": [
-			"dist/credentials/ExampleCredentialsApi.credentials.js",
-			"dist/credentials/HttpBinApi.credentials.js"
+			"dist/credentials/WiroApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/ExampleNode/ExampleNode.node.js",
-			"dist/nodes/HttpBin/HttpBin.node.js"
+			"dist/nodes/WiroAI/GenerateSpeechTts.node.js"
 		]
 	},
 	"devDependencies": {
+		"@types/node": "^22.15.30",
 		"@typescript-eslint/parser": "~8.32.0",
 		"eslint": "^8.57.0",
 		"eslint-plugin-n8n-nodes-base": "^1.16.3",
@@ -52,7 +52,5 @@
 	"peerDependencies": {
 		"n8n-workflow": "*"
 	},
-	"dependencies": {
-		"crypto": "^1.0.1"
-	}
+	"dependencies": {}
 }

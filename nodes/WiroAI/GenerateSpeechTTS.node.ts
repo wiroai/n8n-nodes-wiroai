@@ -3,6 +3,8 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
+	NodeConnectionType,
+	NodeApiError,
 } from 'n8n-workflow';
 
 import { generateWiroAuthHeaders } from './utils/auth';
@@ -11,7 +13,7 @@ import { pollTaskUntilComplete } from './utils/polling';
 export class GenerateSpeechTTS implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Wiro - Generate Speech',
-		name: 'wiroaiGenerateSpeechTTS',
+		name: 'wiroaiGenerateSpeechTts',
 		icon: { light: 'file:wiro.svg', dark: 'file:wiro.svg' },
 		group: ['transform'],
 		version: 1,
@@ -19,8 +21,8 @@ export class GenerateSpeechTTS implements INodeType {
 		defaults: {
 			name: 'Generate Speech',
 		},
-		inputs: ['main'],
-		outputs: ['main'],
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
 		credentials: [
 			{
 				name: 'wiroApi',
@@ -43,8 +45,8 @@ export class GenerateSpeechTTS implements INodeType {
 					{ name: 'Alloy', value: 'af_alloy' },
 					{ name: 'Heart', value: 'af_heart' },
 					{ name: 'Jessica', value: 'af_jessica' },
-					{ name: 'Santa', value: 'am_santa' },
 					{ name: 'Nova', value: 'af_nova' },
+					{ name: 'Santa', value: 'am_santa' },
 				],
 				default: 'af_heart',
 				required: true,
@@ -55,12 +57,12 @@ export class GenerateSpeechTTS implements INodeType {
 				type: 'options',
 				options: [
 					{ name: 'American English', value: 'a' },
+					{ name: 'Brazilian Portuguese', value: 'p' },
 					{ name: 'British English', value: 'b' },
-					{ name: 'Spanish', value: 'e' },
 					{ name: 'French', value: 'f' },
 					{ name: 'Hindi', value: 'h' },
 					{ name: 'Italian', value: 'i' },
-					{ name: 'Brazilian Portuguese', value: 'p' },
+					{ name: 'Spanish', value: 'e' },
 				],
 				default: 'a',
 				required: true,
@@ -101,18 +103,33 @@ export class GenerateSpeechTTS implements INodeType {
 
 			const socketaccesstoken = response.socketaccesstoken;
 			if (!response.taskid || !socketaccesstoken) {
-				throw new Error('❌ Wiro API did not return task ID or access token.');
+				throw new NodeApiError(this.getNode(), {
+					message: 'Wiro API did not return task ID or access token.',
+				});
 			}
 
 			// 2. Task tamamlanana kadar bekle
 			const result = await pollTaskUntilComplete.call(this, socketaccesstoken, headers);
 
+			let responseJSON = {
+				taskid: response.taskid,
+				url: '',
+				status: '',
+			};
+
+			switch (result) {
+				case '-1': //Max polling attempts reached
+				case '-2': //Polling Error
+				case '-3': //Task finished but no usable output.
+				case '-4': //Task Canceled
+					responseJSON.status = 'failed';
+				default:
+					responseJSON.status = 'completed';
+					responseJSON.url = result ?? '';
+			}
+
 			returnData.push({
-				json: {
-					taskid: response.taskid,
-					url: result ?? null,
-					status: result ? 'completed' : 'failed',
-				},
+				json: responseJSON,
 			});
 		}
 

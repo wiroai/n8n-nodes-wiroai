@@ -15,7 +15,7 @@ export async function pollTaskUntilComplete(
 
 	for (let attempt = 1; attempt <= maxAttempts; attempt++) {
 		if (options?.debug) {
-			console.log(`⏳ Polling attempt #${attempt}`);
+			//console.log(`⏳ Polling attempt #${attempt}`);
 		}
 
 		const taskRequest = {
@@ -38,7 +38,8 @@ export async function pollTaskUntilComplete(
 			const status = task?.status;
 
 			if (status === 'task_cancel') {
-				throw new Error('🛑 Task cancelled.');
+				//throw new Error('🛑 Task cancelled.');
+				return '-4';
 			}
 
 			if (status === 'task_postprocess_end') {
@@ -49,16 +50,18 @@ export async function pollTaskUntilComplete(
 				if (output?.content?.message) {
 					return output.content.message;
 				}
-				throw new Error('🛑 Task finished but no usable output.');
+
+				//throw new Error('🛑 Task finished but no usable output.');
+				return '-3';
 			}
 		} catch (err: any) {
-			console.error(`[Polling Error] ${err.message}`);
-			return null;
+			//console.error(`[Polling Error] ${err.message}`);
+			return '-2';
 		}
 
 		await new Promise((res) => setTimeout(res, pollingIntervalMs));
 	}
 
-	console.warn(`⚠️ Max polling attempts reached (${maxAttempts})`);
-	return null;
+	//console.warn(`⚠️ Max polling attempts reached (${maxAttempts})`);
+	return '-1';
 }

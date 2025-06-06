@@ -1,5 +1,5 @@
 {
-	"node": "wiroaiGenerateSpeechTTS",
+	"node": "wiroaiGenerateSpeechTts",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"categories": ["AI", "Text to Speech"],
@@ -11,7 +11,7 @@
 		],
 		"credentialDocumentation": [
 			{
-				"url": "https://wiro.ai/tools/wiro/kokoro_tts#apisamples-curl"
+				"url": "https://wiro.ai/docs"
 			}
 		]
 	}
