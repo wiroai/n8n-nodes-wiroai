@@ -38,7 +38,7 @@ export class ShortsReelsVideoGenerator implements INodeType {
 				default: '',
 				required: true,
 				description:
-					'Type what you want the video to be about. The AI will generate a short video accordingly',
+					'Type what you want the video to be about, The AI will generate a short video accordingly',
 			},
 			{
 				displayName: 'Video Duration (Seconds)',
@@ -132,6 +132,7 @@ export class ShortsReelsVideoGenerator implements INodeType {
 				displayName: 'Caption Font Family',
 				name: 'captionFontFamily',
 				type: 'options',
+				// eslint-disable-next-line n8n-nodes-base/node-param-default-wrong-for-options
 				default: 'Poppins-Bold',
 				options: getPoppinsFontOptions(),
 				description: 'Font used in captions',
@@ -161,6 +162,7 @@ export class ShortsReelsVideoGenerator implements INodeType {
 				displayName: 'Cover Font Family',
 				name: 'coverFontFamily',
 				type: 'options',
+				// eslint-disable-next-line n8n-nodes-base/node-param-default-wrong-for-options
 				default: 'Poppins-Bold',
 				options: getPoppinsFontOptions(),
 				description: 'Font used in cover screen',

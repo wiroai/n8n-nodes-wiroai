@@ -35,7 +35,7 @@ Each tool is implemented as a **separate node** for modular and easy use.
 Follow the [n8n community nodes guide](https://docs.n8n.io/integrations/community-nodes/installation/) to install this package.
 
 ```bash
-npm install n8n-nodes-wiroai
+npm install @wiro-ai/n8n-nodes-wiroai
 ```
 
 ---
@@ -72,7 +72,7 @@ You’ll need a Wiro API Key and Secret.
 **Steps:**
 
 1. Go to [wiro.ai](https://wiro.ai) and sign up
-2. [wiro.ai/panel/project/](https://wiro.ai/panel/project/) Create a project and get your API credentials
+2. Create a project [wiro.ai/panel/project/](https://wiro.ai/panel/project/) and get your API credentials
 3. In n8n → Credentials → Add new → **Wiro API**
 4. Enter your key and secret values
 
@@ -130,9 +130,9 @@ nodes/WiroAI/
 ├── GenerateBackgroundMusic/
     ├── GenerateBackgroundMusic.nodes.ts
     └── GenerateBackgroundMusic.nodes.json
-├── GenerateSpeechTTS/
-    ├── GenerateSpeechTTS.nodes.ts
-    └── GenerateSpeechTTS.nodes.json
+├── GenerateSpeechTts/
+    ├── GenerateSpeechTts.nodes.ts
+    └── GenerateSpeechTts.nodes.json
 ├── ImageToVideoKling16/
     ├── ImageToVideoKling16.nodes.ts
     └── ImageToVideoKling16.nodes.json

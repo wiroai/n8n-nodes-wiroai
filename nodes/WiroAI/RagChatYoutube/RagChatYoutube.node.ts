@@ -80,23 +80,36 @@ export class RagChatYoutube implements INodeType {
 				options: [
 					{ name: 'Qwen/Qwen2.5-14B-Instruct', value: '757' },
 					{ name: 'Qwen/Qwen2.5-32B-Instruct', value: '756' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B', value: '743' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-14B', value: '742' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Llama-8B', value: '741' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B', value: '740' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', value: '739' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'utter-project/EuroLLM-9B-Instruct', value: '735' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'utter-project/EuroLLM-1.7B-Instruct', value: '734' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'm42-health/Llama3-Med42-8B', value: '730' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'meta-llama/Llama-3.2-3B-Instruct', value: '728' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'meta-llama/CodeLlama-34b-Instruct-hf', value: '726' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'meta-llama/CodeLlama-7b-Instruct-hf', value: '725' },
 					{ name: 'internlm/internlm3-8b-instruct', value: '720' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'CohereForAI/aya-expanse-8b', value: '719' },
 					{ name: 'mistralai/Mistral-Nemo-Instruct-2407', value: '717' },
 					{ name: 'HuggingFaceTB/SmolLM2-1.7B-Instruct', value: '716' },
 					{ name: 'mistralai/Mathstral-7B-v0.1', value: '714' },
 					{ name: 'deepseek-ai/deepseek-math-7b-instruct', value: '713' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'microsoft/Phi-3.5-mini-instruct', value: '712' },
 					{ name: 'Qwen/Qwen2.5-3B-Instruct', value: '711' },
 					{ name: 'Qwen/Qwen2.5-0.5B-Instruct', value: '710' },
@@ -110,12 +123,15 @@ export class RagChatYoutube implements INodeType {
 					{ name: 'Qwen/Qwen2.5-Coder-32B-Instruct', value: '685' },
 					{ name: 'google/gemma-2-2b-it', value: '684' },
 					{ name: 'google/gemma-2-9b-it', value: '683' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'meta-llama/Meta-Llama-3-8B-Instruct', value: '682' },
 					{ name: 'mistralai/Mistral-7B-Instruct-v0.3', value: '681' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'meta-llama/Llama-3.1-8B-Instruct', value: '680' },
 					{ name: 'Qwen/Qwen2.5-7B-Instruct', value: '679' },
 					{ name: 'wiro/wiroai-turkish-llm-8b', value: '676' },
 					{ name: 'wiro/wiroai-turkish-llm-9b', value: '675' },
+					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
 					{ name: 'meta-llama/Llama-2-7b-chat-hf', value: '617' },
 				],
 			},
@@ -178,6 +194,7 @@ export class RagChatYoutube implements INodeType {
 			{
 				displayName: 'Max New Tokens',
 				name: 'max_new_tokens',
+				// eslint-disable-next-line n8n-nodes-base/node-param-type-options-password-missing
 				type: 'string',
 				default: '0',
 				required: true,

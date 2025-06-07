@@ -43,6 +43,7 @@ export class GenerateBackgroundMusic implements INodeType {
 			{
 				displayName: 'Tokens',
 				name: 'tokens',
+				// eslint-disable-next-line n8n-nodes-base/node-param-type-options-password-missing
 				type: 'string',
 				default: '1024',
 				required: true,

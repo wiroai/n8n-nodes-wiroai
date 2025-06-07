@@ -3,6 +3,7 @@
 	"version": "1.0.0",
 	"description": "n8n community node for Wiro AI's Generative AI APIs.",
 	"keywords": [
+		"n8n-community-node-package",
 		"n8n",
 		"wiroai",
 		"wiro.ai",

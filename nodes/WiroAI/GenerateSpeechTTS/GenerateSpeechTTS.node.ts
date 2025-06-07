@@ -10,7 +10,7 @@ import {
 import { generateWiroAuthHeaders } from '../utils/auth';
 import { pollTaskUntilComplete } from '../utils/polling';
 
-export class GenerateSpeechTTS implements INodeType {
+export class GenerateSpeechTts implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Wiro - Generate Speech',
 		name: 'generateSpeechTts',
