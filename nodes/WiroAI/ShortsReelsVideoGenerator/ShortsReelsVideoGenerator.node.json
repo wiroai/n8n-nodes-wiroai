@@ -1,0 +1,32 @@
+{
+	"node": "shortsReelsVideoGenerator",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generates shorts / reels video content from prompt using Wiro.",
+	"categories": ["AI", "Action in an app", "Utility", "Productivity", "Video", "Shorts", "Reels"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Shorts",
+		"Reels",
+		"Social Video",
+		"TikTok",
+		"Instagram",
+		"YouTube Shorts",
+		"Video Generator",
+		"Vertical Video"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/Shorts-Reels-Video-Generator#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

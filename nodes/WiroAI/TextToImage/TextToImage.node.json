@@ -1,0 +1,32 @@
+{
+	"node": "textToImage",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Converts texts to images using Wiro AI",
+	"categories": ["AI", "Image", "Utility", "Productivity", "Text to Image"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Image Generator",
+		"Prompt to Image",
+		"Text2Image",
+		"AI Art",
+		"Image Creation",
+		"Image Synthesis",
+		"Text Prompt",
+		"Art Generator"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/text-to-image-sana#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

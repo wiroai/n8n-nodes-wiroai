@@ -1,0 +1,30 @@
+{
+	"node": "generateBackgroundMusic",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generates background music using AI",
+	"categories": ["AI", "Action in an app", "Utility", "Productivity", "Audio", "Music"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Music Generation",
+		"Background Audio",
+		"Soundtrack",
+		"Melody",
+		"Music AI",
+		"Sound Design"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/music_gen#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

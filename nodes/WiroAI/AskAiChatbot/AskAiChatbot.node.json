@@ -1,0 +1,33 @@
+{
+	"node": "askAiChatbot",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Sends a prompt to Wiro AI's chatbot and returns the assistant's response",
+	"categories": ["AI", "Utility", "Productivity", "Text", "Chat", "LLM"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Chatbot",
+		"LLM Prompt",
+		"Text Completion",
+		"Chat Completion",
+		"Assistant",
+		"Conversational AI",
+		"AI Assistant",
+		"Wiro Chat",
+		"Text Response"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/chat#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

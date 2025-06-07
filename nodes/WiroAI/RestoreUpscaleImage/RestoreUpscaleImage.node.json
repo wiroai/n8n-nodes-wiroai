@@ -1,0 +1,30 @@
+{
+	"node": "restoreUpscaleImage",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Restores and upscales images using Wiro AI",
+	"categories": ["AI", "Image", "Utility", "Productivity", "Editing"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Image Restoration",
+		"Upscale",
+		"Enhance Image",
+		"AI Photo Repair",
+		"Improve Image",
+		"Clear Image"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/image-restoration#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

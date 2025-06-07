@@ -43,12 +43,24 @@ export async function pollTaskUntilComplete(
 			}
 
 			if (status === 'task_postprocess_end') {
-				const output = task.outputs?.[0];
-				if (output?.url) {
-					return output.url;
-				}
-				if (output?.content?.message) {
-					return output.content.message;
+				const outputs = task.outputs;
+
+				if (Array.isArray(outputs) && outputs.length > 0) {
+					if (outputs.length === 1) {
+						if (outputs[0]?.url) {
+							return outputs[0].url;
+						}
+					} else {
+						const urls = outputs.map((o) => o.url).filter(Boolean);
+						if (urls.length > 0) {
+							return urls.join(' | ');
+						}
+					}
+
+					const firstMessage = outputs[0]?.content?.message;
+					if (firstMessage) {
+						return firstMessage;
+					}
 				}
 
 				//throw new Error('🛑 Task finished but no usable output.');

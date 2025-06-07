@@ -7,13 +7,13 @@ import {
 	NodeApiError,
 } from 'n8n-workflow';
 
-import { generateWiroAuthHeaders } from './utils/auth';
-import { pollTaskUntilComplete } from './utils/polling';
+import { generateWiroAuthHeaders } from '../utils/auth';
+import { pollTaskUntilComplete } from '../utils/polling';
 
 export class GenerateSpeechTTS implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Wiro - Generate Speech',
-		name: 'wiroaiGenerateSpeechTts',
+		name: 'generateSpeechTts',
 		icon: { light: 'file:wiro.svg', dark: 'file:wiro.svg' },
 		group: ['transform'],
 		version: 1,
@@ -75,67 +75,66 @@ export class GenerateSpeechTTS implements INodeType {
 	};
 
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
-		const items = this.getInputData();
 		const returnData: INodeExecutionData[] = [];
+
+		const prompt = this.getNodeParameter('prompt', 0) as string;
+		const voice = this.getNodeParameter('voice', 0) as string;
+		const langCode = this.getNodeParameter('langCode', 0) as string;
 
 		const credentials = await this.getCredentials('wiroApi');
 		const apiKey = credentials.apiKey as string;
 		const apiSecret = credentials.apiSecret as string;
+		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		for (let i = 0; i < items.length; i++) {
-			const prompt = this.getNodeParameter('prompt', i) as string;
-			const voice = this.getNodeParameter('voice', i) as string;
-			const langCode = this.getNodeParameter('langCode', i) as string;
+		const response = await this.helpers.request({
+			method: 'POST',
+			url: 'https://api.wiro.ai/v1/Run/wiro/kokoro_tts',
+			headers: {
+				...headers,
+				'Content-Type': 'application/json',
+			},
+			body: {
+				prompt,
+				voice,
+				langCode,
+			},
+			json: true,
+		});
 
-			const headers = generateWiroAuthHeaders(apiKey, apiSecret);
-
-			// 1. TTS Görevi oluştur
-			const response = await this.helpers.request({
-				method: 'POST',
-				url: 'https://api.wiro.ai/v1/Run/wiro/kokoro_tts',
-				headers: {
-					...headers,
-					'Content-Type': 'application/json',
-				},
-				body: {
-					prompt,
-					voice,
-					langCode,
-				},
-				json: true,
-			});
-
-			const socketaccesstoken = response.socketaccesstoken;
-			if (!response.taskid || !socketaccesstoken) {
-				throw new NodeApiError(this.getNode(), {
-					message: 'Wiro API did not return task ID or access token.',
-				});
-			}
-
-			// wait until task result
-			const result = await pollTaskUntilComplete.call(this, socketaccesstoken, headers);
-
-			let responseJSON = {
-				taskid: response.taskid,
-				url: '',
-				status: '',
-			};
-
-			switch (result) {
-				case '-1': //Max polling attempts reached
-				case '-2': //Polling Error
-				case '-3': //Task finished but no usable output.
-				case '-4': //Task Canceled
-					responseJSON.status = 'failed';
-				default:
-					responseJSON.status = 'completed';
-					responseJSON.url = result ?? '';
-			}
-
-			returnData.push({
-				json: responseJSON,
+		if (!response?.taskid || !response?.socketaccesstoken) {
+			throw new NodeApiError(this.getNode(), {
+				message:
+					'Wiro API did not return a valid task ID or socket access token ' +
+					JSON.stringify(response),
 			});
 		}
+
+		const taskid = response.taskid;
+		const socketaccesstoken = response.socketaccesstoken;
+
+		const result = await pollTaskUntilComplete.call(this, socketaccesstoken, headers);
+
+		const responseJSON = {
+			taskid: taskid,
+			url: '',
+			status: '',
+		};
+
+		switch (result) {
+			case '-1':
+			case '-2':
+			case '-3':
+			case '-4':
+				responseJSON.status = 'failed';
+				break;
+			default:
+				responseJSON.status = 'completed';
+				responseJSON.url = result ?? '';
+		}
+
+		returnData.push({
+			json: responseJSON,
+		});
 
 		return [returnData];
 	}

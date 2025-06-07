@@ -1,0 +1,32 @@
+{
+	"node": "cvEvaluatorJobdesc",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Scores and analyzes resumes based on job descriptions using AI",
+	"categories": ["AI", "Utility", "Productivity", "Document", "Text Analysis", "HR", "Resume"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"CV Evaluation",
+		"Resume Scoring",
+		"Job Matching",
+		"Candidate Analysis",
+		"AI Recruiter",
+		"Document Assessment",
+		"Talent Fit",
+		"Wiro CV Evaluator"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/AI-Resume-CV-Evaluator-JobDesc#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

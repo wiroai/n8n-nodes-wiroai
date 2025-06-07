@@ -1,0 +1,32 @@
+{
+	"node": "textToVideoKling16",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generates high-quality video from text prompts using KlingAI",
+	"categories": ["AI", "Action in an app", "Utility", "Productivity", "Text to Video", "Video"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Text2Video",
+		"Video Generator",
+		"AI Video",
+		"Prompt to Video",
+		"Video Creation",
+		"Video Synthesis",
+		"KlingAI",
+		"Text Prompt Video"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/klingai/text-to-video-klingai-v1++6#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

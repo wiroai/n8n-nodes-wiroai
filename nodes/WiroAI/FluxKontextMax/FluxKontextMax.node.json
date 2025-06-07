@@ -1,0 +1,34 @@
+{
+	"node": "fluxKontextMax",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Enhances product or object imagery for clean, e-commerce-ready visuals via Flux Kontext Max",
+	"categories": ["AI", "Action in an app", "Utility", "Productivity", "Image", "Editing"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Image Transformation",
+		"Product Photo Enhancer",
+		"Visual Enhancer",
+		"Kontext Max",
+		"E-commerce Image",
+		"Clean Background",
+		"Lighting Correction",
+		"Photo Improve",
+		"Product Shot",
+		"Flux AI"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/black-forest-labs/flux-kontext-max#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

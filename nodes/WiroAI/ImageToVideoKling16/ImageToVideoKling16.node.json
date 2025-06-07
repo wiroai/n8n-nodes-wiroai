@@ -1,0 +1,30 @@
+{
+	"node": "imageToVideoKling16",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generates video with image using KlingAI 1.6",
+	"categories": ["AI", "Action in an app", "Utility", "Productivity", "Image", "Video"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Image to Video",
+		"Animate",
+		"Photo Animation",
+		"Motion",
+		"KlingAI",
+		"Transition"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/klingai/image-to-video-klingai-v1++6#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

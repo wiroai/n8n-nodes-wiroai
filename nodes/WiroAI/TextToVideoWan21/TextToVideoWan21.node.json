@@ -1,0 +1,33 @@
+{
+	"node": "textToVideoWan21",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Converts text prompts into high-quality video using Wiro AI's Text-to-Video engine",
+	"categories": ["AI", "Action in an app", "Utility", "Productivity", "Text to Video", "Video"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Wan2.1",
+		"Text2Video",
+		"Video Generator",
+		"AI Video",
+		"Prompt to Video",
+		"Video Creation",
+		"Video Synthesis",
+		"WAN2",
+		"Wiro Video AI"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/text-to-video-wan2++1#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

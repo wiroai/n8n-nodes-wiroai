@@ -1,0 +1,38 @@
+{
+	"node": "mobileWallpaperGenerator",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generates 4K-quality mobile phone wallpapers using Wiro AI",
+	"categories": [
+		"Wiro",
+		"WiroAI",
+		"AI",
+		"Action in an app",
+		"Utility",
+		"Productivity",
+		"Text to Image",
+		"Image Generation"
+	],
+	"alias": [
+		"Wallpaper Generator",
+		"4K Wallpaper",
+		"Mobile Background",
+		"Image Creator",
+		"Phone Wallpaper",
+		"Text to Image",
+		"AI Art"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://api.wiro.ai/v1/Run/wiro/text-to-image-sana#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

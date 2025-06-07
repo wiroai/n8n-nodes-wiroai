@@ -1,0 +1,31 @@
+{
+	"node": "removeImageBackground",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Removes the background from any image using AI",
+	"categories": ["AI", "Image", "Utility", "Productivity", "Editing"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Background Remover",
+		"Remove Background",
+		"Erase Background",
+		"Transparent Background",
+		"Image Cleanup",
+		"Image Editing",
+		"AI Background Removal"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/remove-background#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"node": "interiorDesignGenerator",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Redesigns interior spaces using uploaded reference images and descriptive prompts",
+	"categories": ["AI", "Action in an app", "Utility", "Productivity", "Text to Image", "Interior"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Room Design",
+		"Home Decor",
+		"Interior",
+		"Remodel",
+		"AI Redesign",
+		"Space Generator",
+		"Furniture Layout"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/interior-design#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

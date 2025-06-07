@@ -1,0 +1,32 @@
+{
+	"node": "videoBgMusicGenerator",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Adds AI-generated background music to videos",
+	"categories": ["AI", "Action in an app", "Utility", "Productivity", "Audio", "Video", "Music"],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Background Music",
+		"Music Generator",
+		"Video Soundtrack",
+		"Audio Enhancer",
+		"Music Filler",
+		"AI Music",
+		"Video Audio",
+		"Auto Music"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/tools/wiro/video-background-music-gen#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}
