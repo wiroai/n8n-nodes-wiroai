@@ -171,6 +171,7 @@ export class AskAiChatbot implements INodeType {
 			{
 				displayName: 'Max Tokens',
 				name: 'max_tokens',
+				// 'max_tokens' is a numeric config string, not a password.
 				// eslint-disable-next-line n8n-nodes-base/node-param-type-options-password-missing
 				type: 'string',
 				default: '0',
@@ -180,6 +181,7 @@ export class AskAiChatbot implements INodeType {
 			{
 				displayName: 'Min Tokens',
 				name: 'min_tokens',
+				// 'min_tokens' is a numeric config string, not a password.
 				// eslint-disable-next-line n8n-nodes-base/node-param-type-options-password-missing
 				type: 'string',
 				default: '0',
