@@ -1,12 +1,70 @@
 {
-	"name": "n8n-nodes-wiroai",
-	"version": "0.1.0",
-	"description": "",
+	"name": "@wiro-ai/n8n-nodes-wiroai",
+	"version": "1.0.0",
+	"description": "n8n community node for Wiro AI's Generative AI APIs.",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n",
+		"wiroai",
+		"wiro.ai",
+		"wiro-ai",
+		"n8n wiro",
+		"n8n ai",
+		"wiro",
+		"ai",
+		"node",
+		"generative",
+		"llm",
+		"rag",
+		"chatbot",
+		"youtube",
+		"tts",
+		"text to speech",
+		"text-to-speech",
+		"voice",
+		"speech synthesis",
+		"text-to-image",
+		"image generation",
+		"image restoration",
+		"image enhancer",
+		"background remover",
+		"easy ocr",
+		"ocr",
+		"resume",
+		"cv analysis",
+		"cv evaluator",
+		"job description",
+		"flux kontext",
+		"kontext pro",
+		"kontext max",
+		"product photography",
+		"ai chatbot",
+		"chat",
+		"rag chat",
+		"shorts",
+		"reels",
+		"video",
+		"video generation",
+		"text to video",
+		"mobile wallpaper",
+		"4k wallpaper",
+		"wallpaper generator",
+		"text2video",
+		"text2image",
+		"image2image",
+		"speech",
+		"youtube rag",
+		"resume scorer",
+		"cv ranking",
+		"ai video",
+		"ai image",
+		"open source",
+		"community node",
+		"n8n community"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"license": "MIT",
-	"description": "Community node for Wiro AI's Generative AI APIs.",
 	"author": {
 		"name": "Wiro AI",
 		"email": "support@wiro.ai"
@@ -19,7 +77,7 @@
 	"engines": {
 		"node": ">=18"
 	},
-	"main": "index.js",
+	"main": "dist/index.js",
 	"scripts": {
 		"build": "npx rimraf dist && tsc && gulp build:icons",
 		"dev": "tsc --watch",
@@ -37,7 +95,7 @@
 			"dist/credentials/WiroApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/WiroAI/GenerateSpeechTts.node.js"
+			"dist/nodes/WiroAI/*.node.js"
 		]
 	},
 	"devDependencies": {
