@@ -1,6 +1,6 @@
 {
 	"name": "@wiro-ai/n8n-nodes-wiroai",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "n8n community node for Wiro AI's Generative AI APIs.",
 	"keywords": [
 		"n8n-community-node-package",
@@ -95,8 +95,25 @@
 		"credentials": [
 			"dist/credentials/WiroApi.credentials.js"
 		],
-		"nodes": [
-			"dist/nodes/WiroAI/*.node.js"
+		  "nodes": [
+			"dist/nodes/WiroAI/AskAiChatbot/AskAiChatbot.node.js",
+			"dist/nodes/WiroAI/CvEvaluatorJobdesc/CvEvaluatorJobdesc.node.js",
+			"dist/nodes/WiroAI/EasyOcr/EasyOcr.node.js",
+			"dist/nodes/WiroAI/FluxKontextMax/FluxKontextMax.node.js",
+			"dist/nodes/WiroAI/FluxKontextPro/FluxKontextPro.node.js",
+			"dist/nodes/WiroAI/GenerateBackgroundMusic/GenerateBackgroundMusic.node.js",
+			"dist/nodes/WiroAI/GenerateSpeechTTS/GenerateSpeechTTS.node.js",
+			"dist/nodes/WiroAI/ImageToVideoKling16/ImageToVideoKling16.node.js",
+			"dist/nodes/WiroAI/InteriorDesignGenerator/InteriorDesignGenerator.node.js",
+			"dist/nodes/WiroAI/MobileWallpaperGenerator/MobileWallpaperGenerator.node.js",
+			"dist/nodes/WiroAI/RagChatYoutube/RagChatYoutube.node.js",
+			"dist/nodes/WiroAI/RemoveImageBackground/RemoveImageBackground.node.js",
+			"dist/nodes/WiroAI/RestoreUpscaleImage/RestoreUpscaleImage.node.js",
+			"dist/nodes/WiroAI/ShortsReelsVideoGenerator/ShortsReelsVideoGenerator.node.js",
+			"dist/nodes/WiroAI/TextToImage/TextToImage.node.js",
+			"dist/nodes/WiroAI/TextToVideoKling16/TextToVideoKling16.node.js",
+			"dist/nodes/WiroAI/TextToVideoWan21/TextToVideoWan21.node.js",
+			"dist/nodes/WiroAI/VideoBgMusicGenerator/VideoBgMusicGenerator.node.js"
 		]
 	},
 	"devDependencies": {
