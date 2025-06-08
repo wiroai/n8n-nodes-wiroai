@@ -1,6 +1,6 @@
 {
 	"name": "@wiro-ai/n8n-nodes-wiroai",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "n8n community node for Wiro AI's Generative AI APIs.",
 	"keywords": [
 		"n8n-community-node-package",
@@ -102,7 +102,7 @@
 			"dist/nodes/WiroAI/FluxKontextMax/FluxKontextMax.node.js",
 			"dist/nodes/WiroAI/FluxKontextPro/FluxKontextPro.node.js",
 			"dist/nodes/WiroAI/GenerateBackgroundMusic/GenerateBackgroundMusic.node.js",
-			"dist/nodes/WiroAI/GenerateSpeechTTS/GenerateSpeechTTS.node.js",
+			"dist/nodes/WiroAI/GenerateSpeechTts/GenerateSpeechTts.node.js",
 			"dist/nodes/WiroAI/ImageToVideoKling16/ImageToVideoKling16.node.js",
 			"dist/nodes/WiroAI/InteriorDesignGenerator/InteriorDesignGenerator.node.js",
 			"dist/nodes/WiroAI/MobileWallpaperGenerator/MobileWallpaperGenerator.node.js",
