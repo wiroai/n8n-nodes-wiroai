@@ -132,6 +132,7 @@ export class ShortsReelsVideoGenerator implements INodeType {
 				displayName: 'Caption Font Family',
 				name: 'captionFontFamily',
 				type: 'options',
+				// options load with function
 				// eslint-disable-next-line n8n-nodes-base/node-param-default-wrong-for-options
 				default: 'Poppins-Bold',
 				options: getPoppinsFontOptions(),
@@ -162,6 +163,7 @@ export class ShortsReelsVideoGenerator implements INodeType {
 				displayName: 'Cover Font Family',
 				name: 'coverFontFamily',
 				type: 'options',
+				// options load with function
 				// eslint-disable-next-line n8n-nodes-base/node-param-default-wrong-for-options
 				default: 'Poppins-Bold',
 				options: getPoppinsFontOptions(),

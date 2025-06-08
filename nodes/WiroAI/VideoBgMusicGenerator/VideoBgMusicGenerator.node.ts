@@ -42,6 +42,7 @@ export class VideoBgMusicGenerator implements INodeType {
 			{
 				displayName: 'Tokens',
 				name: 'tokens',
+				// 'tokens' is a numeric config string, not a password.
 				// eslint-disable-next-line n8n-nodes-base/node-param-type-options-password-missing
 				type: 'string',
 				default: '1024',

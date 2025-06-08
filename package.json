@@ -1,6 +1,10 @@
 {
 	"name": "@wiro-ai/n8n-nodes-wiroai",
+<<<<<<< HEAD
 	"version": "1.0.2",
+=======
+	"version": "1.0.3",
+>>>>>>> 9a32c5f8f7152a87df96873402c896fb189d8a41
 	"description": "n8n community node for Wiro AI's Generative AI APIs.",
 	"keywords": [
 		"n8n-community-node-package",
