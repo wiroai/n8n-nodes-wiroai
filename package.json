@@ -1,7 +1,6 @@
 {
 	"name": "@wiro-ai/n8n-nodes-wiroai",
-	"version": "1.0.4",
-
+	"version": "1.0.5",
 	"description": "n8n community node for Wiro AI's Generative AI APIs.",
 	"keywords": [
 		"n8n-community-node-package",
@@ -96,7 +95,7 @@
 		"credentials": [
 			"dist/credentials/WiroApi.credentials.js"
 		],
-		  "nodes": [
+		"nodes": [
 			"dist/nodes/WiroAI/AskAiChatbot/AskAiChatbot.node.js",
 			"dist/nodes/WiroAI/CvEvaluatorJobdesc/CvEvaluatorJobdesc.node.js",
 			"dist/nodes/WiroAI/EasyOcr/EasyOcr.node.js",
