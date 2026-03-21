@@ -3,7 +3,7 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-	NodeConnectionType,
+	NodeConnectionTypes,
 	NodeApiError,
 } from 'n8n-workflow';
 
@@ -21,8 +21,8 @@ export class ProductStudio implements INodeType {
 		defaults: {
 			name: 'Wiro - Product Studio - 360° Product Video Generator',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		usableAsTool: true,
 		credentials: [
 			{

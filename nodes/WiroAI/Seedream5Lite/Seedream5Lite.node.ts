@@ -3,7 +3,7 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-	NodeConnectionType,
+	NodeConnectionTypes,
 	NodeApiError,
 } from 'n8n-workflow';
 
@@ -21,8 +21,8 @@ export class Seedream5Lite implements INodeType {
 		defaults: {
 			name: 'Wiro - Seedream V5 Lite - Image-to-Image & Text-to-Image Generator',
 		},
-		inputs: [NodeConnectionType.Main],
-		outputs: [NodeConnectionType.Main],
+		inputs: [NodeConnectionTypes.Main],
+		outputs: [NodeConnectionTypes.Main],
 		usableAsTool: true,
 		credentials: [
 			{
