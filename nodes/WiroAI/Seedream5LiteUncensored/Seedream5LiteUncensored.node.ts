@@ -114,7 +114,7 @@ export class Seedream5LiteUncensored implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/ByteDance/seedream-v5-lite-uncensored',
 			headers: {
@@ -129,7 +129,6 @@ export class Seedream5LiteUncensored implements INodeType {
 				maxImages,
 				watermark,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

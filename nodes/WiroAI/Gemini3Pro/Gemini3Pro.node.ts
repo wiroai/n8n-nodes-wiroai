@@ -122,7 +122,7 @@ export class Gemini3Pro implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/google/gemini-3-pro',
 			headers: {
@@ -140,7 +140,6 @@ export class Gemini3Pro implements INodeType {
 				topP,
 				maxOutputTokens,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

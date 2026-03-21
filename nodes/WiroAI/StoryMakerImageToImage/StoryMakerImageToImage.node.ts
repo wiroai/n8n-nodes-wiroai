@@ -152,7 +152,7 @@ export class StoryMakerImageToImage implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/story-maker-image-to-image',
 			headers: {
@@ -174,7 +174,6 @@ export class StoryMakerImageToImage implements INodeType {
 				scale,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

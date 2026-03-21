@@ -437,7 +437,7 @@ export class TrainSdLora implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/train-sd-lora',
 			headers: {
@@ -488,7 +488,6 @@ export class TrainSdLora implements INodeType {
 				selectedFolder,
 				selectedFolderUrl,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

@@ -162,7 +162,7 @@ export class WhisperLarge3 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/openai/whisper-large-v3',
 			headers: {
@@ -178,7 +178,6 @@ export class WhisperLarge3 implements INodeType {
 				numSpeakers,
 				diarization,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

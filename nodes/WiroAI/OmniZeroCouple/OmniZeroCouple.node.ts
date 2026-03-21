@@ -176,7 +176,7 @@ export class OmniZeroCouple implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/omni_zero_couple',
 			headers: {
@@ -201,7 +201,6 @@ export class OmniZeroCouple implements INodeType {
 				identityImage1Strength,
 				identityImage2Strength,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

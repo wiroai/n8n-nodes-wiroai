@@ -108,7 +108,7 @@ export class Kling3MotionControl implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/klingai/kling-v3-motion-control',
 			headers: {
@@ -123,7 +123,6 @@ export class Kling3MotionControl implements INodeType {
 				originalSound,
 				characterOrientation,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

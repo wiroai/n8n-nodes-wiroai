@@ -151,7 +151,7 @@ export class Seed2Lite implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/bytedance/seed-v2-lite',
 			headers: {
@@ -172,7 +172,6 @@ export class Seed2Lite implements INodeType {
 				reasoningEffort,
 				thinkingType,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

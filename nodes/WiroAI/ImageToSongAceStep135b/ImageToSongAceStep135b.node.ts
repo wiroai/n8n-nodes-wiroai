@@ -214,7 +214,7 @@ export class ImageToSongAceStep135b implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/ACE-Step/image-to-song-ACE-Step-v1-3.5B',
 			headers: {
@@ -241,7 +241,6 @@ export class ImageToSongAceStep135b implements INodeType {
 				guidanceScaleText,
 				guidanceScaleLyric,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

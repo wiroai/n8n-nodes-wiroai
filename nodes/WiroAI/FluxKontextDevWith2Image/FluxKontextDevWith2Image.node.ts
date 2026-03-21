@@ -100,7 +100,7 @@ export class FluxKontextDevWith2Image implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/flux_kontext_dev_with_2_image',
 			headers: {
@@ -116,7 +116,6 @@ export class FluxKontextDevWith2Image implements INodeType {
 				samples,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

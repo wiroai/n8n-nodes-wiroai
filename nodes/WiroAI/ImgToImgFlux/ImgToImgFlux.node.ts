@@ -121,7 +121,7 @@ export class ImgToImgFlux implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/img-to-img-flux',
 			headers: {
@@ -139,7 +139,6 @@ export class ImgToImgFlux implements INodeType {
 				seed,
 				strength,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

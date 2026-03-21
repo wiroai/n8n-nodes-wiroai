@@ -142,7 +142,7 @@ export class Imagen4Ultra implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/google/imagen-v4-ultra',
 			headers: {
@@ -159,7 +159,6 @@ export class Imagen4Ultra implements INodeType {
 				language,
 				safetySetting,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

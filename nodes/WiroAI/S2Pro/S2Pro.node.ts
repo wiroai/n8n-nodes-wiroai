@@ -116,7 +116,7 @@ export class S2Pro implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/fishaudio/s2-pro',
 			headers: {
@@ -134,7 +134,6 @@ export class S2Pro implements INodeType {
 				chunkLength,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

@@ -72,7 +72,7 @@ export class AiCultureFitTestGenerator implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/AI-Culture-Fit-Test-Generator',
 			headers: {
@@ -84,7 +84,6 @@ export class AiCultureFitTestGenerator implements INodeType {
 				websiteUrl,
 				language,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

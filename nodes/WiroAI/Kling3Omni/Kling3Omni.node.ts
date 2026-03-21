@@ -204,7 +204,7 @@ export class Kling3Omni implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/klingai/kling-v3-omni',
 			headers: {
@@ -229,7 +229,6 @@ export class Kling3Omni implements INodeType {
 				multiPrompt,
 				scale,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

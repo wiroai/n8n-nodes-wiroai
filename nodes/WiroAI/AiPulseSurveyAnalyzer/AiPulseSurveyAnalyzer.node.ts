@@ -71,7 +71,7 @@ export class AiPulseSurveyAnalyzer implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/AI-Pulse-Survey-Analyzer',
 			headers: {
@@ -83,7 +83,6 @@ export class AiPulseSurveyAnalyzer implements INodeType {
 				inputDocumentUrlMultiple,
 				language,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

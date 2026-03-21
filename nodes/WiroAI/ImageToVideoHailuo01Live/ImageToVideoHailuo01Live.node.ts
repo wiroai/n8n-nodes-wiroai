@@ -60,7 +60,7 @@ export class ImageToVideoHailuo01Live implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/MiniMax/image-to-video-hailuo-01-live',
 			headers: {
@@ -71,7 +71,6 @@ export class ImageToVideoHailuo01Live implements INodeType {
 				inputImageUrl,
 				prompt,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

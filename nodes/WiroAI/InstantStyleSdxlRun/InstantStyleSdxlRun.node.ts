@@ -123,7 +123,7 @@ export class InstantStyleSdxlRun implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/instant_style_sdxl_run',
 			headers: {
@@ -142,7 +142,6 @@ export class InstantStyleSdxlRun implements INodeType {
 				ipScale,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

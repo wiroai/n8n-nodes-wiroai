@@ -89,7 +89,7 @@ export class ImageToImageSeededit3 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/ByteDance/image-to-image-seededit-v3',
 			headers: {
@@ -103,7 +103,6 @@ export class ImageToImageSeededit3 implements INodeType {
 				watermark,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

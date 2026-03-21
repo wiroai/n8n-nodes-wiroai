@@ -1,3 +1,4 @@
+import { setTimeout as delay } from 'node:timers/promises';
 import { IExecuteFunctions } from 'n8n-workflow';
 
 export async function pollTaskUntilComplete(
@@ -14,16 +15,12 @@ export async function pollTaskUntilComplete(
 	const maxAttempts = options?.maxAttempts ?? 30;
 
 	for (let attempt = 1; attempt <= maxAttempts; attempt++) {
-		if (options?.debug) {
-			//console.log(`⏳ Polling attempt #${attempt}`);
-		}
-
 		const taskRequest = {
 			tasktoken: socketaccesstoken,
 		};
 
 		try {
-			const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 				method: 'POST',
 				url: 'https://api.wiro.ai/v1/Task/Detail',
 				headers: {
@@ -31,14 +28,12 @@ export async function pollTaskUntilComplete(
 					'Content-Type': 'application/json',
 				},
 				body: taskRequest,
-				json: true,
 			});
 
 			const task = response.tasklist?.[0];
 			const status = task?.status;
 
 			if (status === 'task_cancel') {
-				//throw new Error('🛑 Task cancelled.');
 				return '-4';
 			}
 
@@ -51,7 +46,7 @@ export async function pollTaskUntilComplete(
 							return outputs[0].url;
 						}
 					} else {
-						const urls = outputs.map((o) => o.url).filter(Boolean);
+						const urls = outputs.map((o: { url?: string }) => o.url).filter(Boolean);
 						if (urls.length > 0) {
 							return urls.join(' | ');
 						}
@@ -63,17 +58,14 @@ export async function pollTaskUntilComplete(
 					}
 				}
 
-				//throw new Error('🛑 Task finished but no usable output.');
 				return '-3';
 			}
-		} catch (err: any) {
-			//console.error(`[Polling Error] ${err.message}`);
+		} catch {
 			return '-2';
 		}
 
-		await new Promise((res) => setTimeout(res, pollingIntervalMs));
+		await delay(pollingIntervalMs);
 	}
 
-	//console.warn(`⚠️ Max polling attempts reached (${maxAttempts})`);
 	return '-1';
 }

@@ -139,7 +139,7 @@ export class MossTtsd implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/OpenMOSS/MOSS-TTSD',
 			headers: {
@@ -160,7 +160,6 @@ export class MossTtsd implements INodeType {
 				inputText5,
 				textNormalize,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

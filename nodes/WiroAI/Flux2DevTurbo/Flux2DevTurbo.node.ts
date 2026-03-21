@@ -108,7 +108,7 @@ export class Flux2DevTurbo implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/FLUX.2-dev-turbo',
 			headers: {
@@ -125,7 +125,6 @@ export class Flux2DevTurbo implements INodeType {
 				width,
 				height,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {
