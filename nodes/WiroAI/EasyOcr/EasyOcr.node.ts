@@ -12,14 +12,14 @@ import { pollTaskUntilComplete } from '../utils/polling';
 
 export class EasyOcr implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Wiro - Extract Text From Image',
+		displayName: 'Wiro - Easy Ocr',
 		name: 'easyOcr',
 		icon: { light: 'file:wiro.svg', dark: 'file:wiro.svg' },
 		group: ['transform'],
 		version: 1,
-		description: 'Extracts text from images using AI',
+		description: 'EasyOCR is the text-recognition model that identifies and extracts text from images',
 		defaults: {
-			name: 'Wiro - Extract Text From Image',
+			name: 'Wiro - Easy Ocr',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
@@ -32,39 +32,21 @@ export class EasyOcr implements INodeType {
 		],
 		properties: [
 			{
-				displayName: 'Enter Image URL',
+				displayName: 'Input Image URL',
 				name: 'inputImageUrl',
 				type: 'string',
 				default: '',
-				required: true,
-				description: 'Enter an image URL to extract text from',
+				description: 'Input-image-help',
 			},
 			{
 				displayName: 'Language',
 				name: 'language',
-				type: 'options',
-				default: 'English',
-				required: true,
+				type: 'multiOptions',
+				default: [],
+				description: 'Select one or more values for language',
 				options: [
-					{ name: 'Arabic', value: 'Arabic' },
-					{ name: 'Chinese', value: 'Chinese' },
-					{ name: 'Czech', value: 'Czech' },
-					{ name: 'Dutch', value: 'Dutch' },
-					{ name: 'English', value: 'English' },
-					{ name: 'French', value: 'French' },
-					{ name: 'German', value: 'German' },
-					{ name: 'Hindi', value: 'Hindi' },
-					{ name: 'Hungarian', value: 'Hungarian' },
-					{ name: 'Italian', value: 'Italian' },
-					{ name: 'Japanese', value: 'Japanese' },
-					{ name: 'Korean', value: 'Korean' },
-					{ name: 'Polish', value: 'Polish' },
-					{ name: 'Portuguese', value: 'Portuguese' },
-					{ name: 'Russian', value: 'Russian' },
-					{ name: 'Spanish', value: 'Spanish' },
-					{ name: 'Turkish', value: 'Turkish' },
+					{ name: '', value: '' },
 				],
-				description: 'Select the language used in the image text',
 			},
 		],
 	};
@@ -72,8 +54,8 @@ export class EasyOcr implements INodeType {
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const returnData: INodeExecutionData[] = [];
 
-		const inputImageUrl = this.getNodeParameter('inputImageUrl', 0) as string;
-		const language = this.getNodeParameter('language', 0) as string;
+		const inputImageUrl = this.getNodeParameter('inputImageUrl', 0, '') as string;
+		const language = this.getNodeParameter('language', 0, '') as string;
 
 		const credentials = await this.getCredentials('wiroApi');
 		const apiKey = credentials.apiKey as string;

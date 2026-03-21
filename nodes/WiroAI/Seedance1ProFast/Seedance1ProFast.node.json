@@ -1,0 +1,30 @@
+{
+	"node": "seedance1ProFast",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create stunning videos with Seedance V1 Pro Fast AI. Transform text or images into high-quality",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Seedance V1 Pro Fast - Video Generator",
+		"Bytedance",
+		"Seedance V1 Pro Fast"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/seedance-v1-pro-fast#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

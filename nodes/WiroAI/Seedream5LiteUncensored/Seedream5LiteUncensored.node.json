@@ -1,0 +1,31 @@
+{
+	"node": "seedream5LiteUncensored",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create custom AI-generated images with Seedream v5 Lite Uncensored. Perfect for artists and des",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Seedream v5 Lite Uncensored Image Generator",
+		"Bytedance",
+		"Seedream V5 Lite Uncensored"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/seedream-v5-lite-uncensored#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

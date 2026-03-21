@@ -1,0 +1,30 @@
+{
+	"node": "productAdsWithLogo",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "AI-powered Product Ads with Logo API combines product images and logos into captivating animate",
+	"categories": [
+		"AI",
+		"Productivity",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Product Ads with Logo",
+		"Product Ads With Logo"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/product-ads-with-logo#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

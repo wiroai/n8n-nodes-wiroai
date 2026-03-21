@@ -1,0 +1,30 @@
+{
+	"node": "seedancePro15Uncensored",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create custom videos from text prompts using Seedance Pro V1.5 by ByteDance. Supports 480p-1080",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Seedance Pro V1.5 Uncensored Video Generator",
+		"Bytedance",
+		"Seedance Pro V1 5 Uncensored"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/seedance-pro-v1-5-uncensored#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

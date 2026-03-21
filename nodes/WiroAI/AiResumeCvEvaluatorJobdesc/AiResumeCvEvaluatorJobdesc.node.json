@@ -1,0 +1,29 @@
+{
+	"node": "aiResumeCvEvaluatorJobdesc",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Wiro/AI-Resume-CV-Evaluator-JobDesc helps you evaluate and score resumes (CVs) based on job des",
+	"categories": [
+		"AI",
+		"Utility"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"AI CV/Resume Evaluator",
+		"Ai Resume Cv Evaluator Jobdesc"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/ai-resume-cv-evaluator-jobdesc#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"node": "aiResumeCvFeedbackGenerator",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Wiro/AI-Resume-CV-Feedback-Generator enables you to generate detailed, personalized feedback on",
+	"categories": [
+		"AI",
+		"Utility"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"AI CV/Resume Evaluator",
+		"Ai Resume Cv Feedback Generator"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/ai-resume-cv-feedback-generator#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

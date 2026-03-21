@@ -1,0 +1,30 @@
+{
+	"node": "gemini25Tts",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Google's Gemini 2.5 Flash Text To Speech Preview model",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Gemini 2.5 TTS",
+		"Google",
+		"Gemini 2 5 Tts"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/google/gemini-2-5-tts#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

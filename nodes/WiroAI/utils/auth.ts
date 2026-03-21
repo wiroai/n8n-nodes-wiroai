@@ -1,6 +1,15 @@
 import * as crypto from 'crypto';
 
-export function generateWiroAuthHeaders(apiKey: string, apiSecret: string) {
+export function generateWiroAuthHeaders(
+	apiKey: string,
+	apiSecret?: string,
+): Record<string, string> {
+	if (!apiSecret) {
+		return {
+			'x-api-key': apiKey,
+		};
+	}
+
 	const nonce = Math.floor(Date.now() / 1000).toString();
 	const message = apiSecret + nonce;
 	const hmac = crypto.createHmac('sha256', apiKey).update(message).digest('hex');

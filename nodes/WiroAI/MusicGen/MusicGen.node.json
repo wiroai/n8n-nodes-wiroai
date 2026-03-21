@@ -1,0 +1,29 @@
+{
+	"node": "musicGen",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "MusicGen is a text-to-music model capable of generating high-quality music samples",
+	"categories": [
+		"AI",
+		"Audio",
+		"Music"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Music Gen"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/music-gen#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

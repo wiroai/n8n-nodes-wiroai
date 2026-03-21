@@ -1,0 +1,30 @@
+{
+	"node": "gptRealtime",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "GPT Realtime enables low-latency, bidirectional streaming for voice and text. Build interactive",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"GPT Realtime Voice Assistant - OpenAI Model",
+		"Openai",
+		"Gpt Realtime"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/openai/gpt-realtime#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

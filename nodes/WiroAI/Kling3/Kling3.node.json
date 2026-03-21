@@ -1,0 +1,30 @@
+{
+	"node": "kling3",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create stunning videos from text prompts with Kling V3 AI. Customize frames, duration, and aspe",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Kling V3 Text-to-Video Generator",
+		"Klingai",
+		"Kling V3"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/klingai/kling-v3#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

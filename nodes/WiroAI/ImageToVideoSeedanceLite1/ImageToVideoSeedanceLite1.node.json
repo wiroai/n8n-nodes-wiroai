@@ -1,0 +1,29 @@
+{
+	"node": "imageToVideoSeedanceLite1",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "An image-to-video generation model that offers 5s or 10s videos, at 480p and 720p resolution",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Bytedance",
+		"Image To Video Seedance Lite V1"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/image-to-video-seedance-lite-v1#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

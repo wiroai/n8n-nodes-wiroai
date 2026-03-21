@@ -1,0 +1,30 @@
+{
+	"node": "kling26MotionControl",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create high-quality videos with controlled motion using Kling V2.6 Motion Control. Perfect for",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Kling V2.6 Motion Control",
+		"Klingai",
+		"Kling V2 6 Motion Control"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/klingai/kling-v2-6-motion-control#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"node": "imageToVideoHailuo01Subject",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generate 6s videos with an image. (Also known as Hailuo)\r\nMiniMax/image-to-video-01-subject is",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Minimax",
+		"Image To Video Hailuo 01 Subject"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/minimax/image-to-video-hailuo-01-subject#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

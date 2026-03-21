@@ -1,0 +1,199 @@
+import {
+	IExecuteFunctions,
+	INodeExecutionData,
+	INodeType,
+	INodeTypeDescription,
+	NodeConnectionType,
+	NodeApiError,
+} from 'n8n-workflow';
+
+import { generateWiroAuthHeaders } from '../utils/auth';
+import { pollTaskUntilComplete } from '../utils/polling';
+
+export class TextToVideo5 implements INodeType {
+	description: INodeTypeDescription = {
+		displayName: 'Wiro - Text To Video V5',
+		name: 'textToVideo5',
+		icon: { light: 'file:wiro.svg', dark: 'file:wiro.svg' },
+		group: ['transform'],
+		version: 1,
+		description: 'Use the PixVerse V5 API for fast text to video generation with simple integration and clear pri',
+		defaults: {
+			name: 'Wiro - Text To Video V5',
+		},
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
+		usableAsTool: true,
+		credentials: [
+			{
+				name: 'wiroApi',
+				required: true,
+			},
+		],
+		properties: [
+			{
+				displayName: 'Prompt',
+				name: 'prompt',
+				type: 'string',
+				default: '',
+				required: true,
+				description: 'The prompt to generate the video',
+			},
+			{
+				displayName: 'Negative Prompt',
+				name: 'negativePrompt',
+				type: 'string',
+				default: '',
+				description: 'Specify what to exclude from the output',
+			},
+			{
+				displayName: 'Aspect Ratio',
+				name: 'aspectRatio',
+				type: 'options',
+				default: '1:1',
+				required: true,
+				description: 'Sets the width-to-height ratio of the output',
+				options: [
+					{ name: '1:1', value: '1:1' },
+					{ name: '16:9', value: '16:9' },
+					{ name: '3:4', value: '3:4' },
+					{ name: '4:3', value: '4:3' },
+					{ name: '9:16', value: '9:16' },
+				],
+			},
+			{
+				displayName: 'Duration',
+				name: 'duration',
+				type: 'options',
+				default: '5',
+				required: true,
+				description: 'V3.5 only allows 5,8. 1080p does not support 8s.',
+				options: [
+					{ name: '5', value: '5' },
+					{ name: '8', value: '8' },
+				],
+			},
+			{
+				displayName: 'Quality',
+				name: 'quality',
+				type: 'options',
+				default: '1080p',
+				required: true,
+				description: 'Quality of the video',
+				options: [
+					{ name: '1080p', value: '1080p' },
+					{ name: '360p(Turbo)', value: '360p' },
+					{ name: '540p', value: '540p' },
+					{ name: '720p', value: '720p' },
+				],
+			},
+			{
+				displayName: 'Style',
+				name: 'style',
+				type: 'options',
+				default: '3d_animation',
+				description: 'You can leave style empty',
+				options: [
+					{ name: '3d Animation', value: '3d_animation' },
+					{ name: 'Anime', value: 'anime' },
+					{ name: 'Clay', value: 'clay' },
+					{ name: 'Comic', value: 'comic' },
+					{ name: 'Cyberpunk', value: 'cyberpunk' },
+				],
+			},
+			{
+				displayName: 'Seed',
+				name: 'seed',
+				type: 'number',
+				default: 0,
+				description: 'Leave null to randomize',
+			},
+			{
+				displayName: 'Watermark',
+				name: 'Watermark',
+				type: 'options',
+				default: 'false',
+				description: 'Select option for watermark',
+				options: [
+					{ name: 'False', value: 'false' },
+					{ name: 'True', value: 'true' },
+				],
+			},
+		],
+	};
+
+	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
+		const returnData: INodeExecutionData[] = [];
+
+		const prompt = this.getNodeParameter('prompt', 0) as string;
+		const negativePrompt = this.getNodeParameter('negativePrompt', 0, '') as string;
+		const aspectRatio = this.getNodeParameter('aspectRatio', 0) as string;
+		const duration = this.getNodeParameter('duration', 0) as string;
+		const quality = this.getNodeParameter('quality', 0) as string;
+		const style = this.getNodeParameter('style', 0, '') as string;
+		const seed = this.getNodeParameter('seed', 0, 0) as number;
+		const Watermark = this.getNodeParameter('Watermark', 0, '') as string;
+
+		const credentials = await this.getCredentials('wiroApi');
+		const apiKey = credentials.apiKey as string;
+		const apiSecret = credentials.apiSecret as string;
+		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
+
+		const response = await this.helpers.request({
+			method: 'POST',
+			url: 'https://api.wiro.ai/v1/Run/PixVerse/text-to-video-v5',
+			headers: {
+				...headers,
+				'Content-Type': 'application/json',
+			},
+			body: {
+				prompt,
+				negativePrompt,
+				aspectRatio,
+				duration,
+				quality,
+				style,
+				seed,
+				Watermark,
+			},
+			json: true,
+		});
+
+		if (!response?.taskid || !response?.socketaccesstoken) {
+			throw new NodeApiError(this.getNode(), {
+				message:
+					'Wiro API did not return a valid task ID or socket access token ' +
+					JSON.stringify(response),
+			});
+		}
+
+		const taskid = response.taskid;
+		const socketaccesstoken = response.socketaccesstoken;
+
+		const result = await pollTaskUntilComplete.call(this, socketaccesstoken, headers);
+
+		const responseJSON = {
+			taskid: taskid,
+			url: '',
+			status: '',
+		};
+
+		switch (result) {
+			case '-1':
+			case '-2':
+			case '-3':
+			case '-4':
+				responseJSON.status = 'failed';
+				break;
+			default:
+				responseJSON.status = 'completed';
+				responseJSON.url = result ?? '';
+		}
+
+		returnData.push({
+			json: responseJSON,
+		});
+
+		return [returnData];
+	}
+}

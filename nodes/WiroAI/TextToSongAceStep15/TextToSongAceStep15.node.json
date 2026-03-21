@@ -1,0 +1,31 @@
+{
+	"node": "textToSongAceStep15",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "ACE-Step v1.5 is a highly efficient open-source music foundation model designed to bring commer",
+	"categories": [
+		"AI",
+		"Audio",
+		"Music"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Text To Song",
+		"Ace Step",
+		"Text To Song Ace Step1 5"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/ace-step/text-to-song-ace-step1-5#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

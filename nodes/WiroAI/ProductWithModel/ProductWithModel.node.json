@@ -1,0 +1,30 @@
+{
+	"node": "productWithModel",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create stunning product videos with AI. Add models to products in custom scenes. Perfect for e-",
+	"categories": [
+		"AI",
+		"Productivity",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Product Model Video Generator",
+		"Product With Model"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/product-with-model#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

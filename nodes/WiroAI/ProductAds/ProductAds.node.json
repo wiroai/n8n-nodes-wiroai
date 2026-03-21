@@ -1,0 +1,29 @@
+{
+	"node": "productAds",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "AI-powered Product Ads API transforms static product images into captivating animated video ads",
+	"categories": [
+		"AI",
+		"Productivity",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Product Ads"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/product-ads#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

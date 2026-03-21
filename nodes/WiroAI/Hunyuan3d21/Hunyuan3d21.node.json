@@ -1,0 +1,30 @@
+{
+	"node": "hunyuan3d21",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Hunyuan3D-2.1 AI 3D model generator for converting images into 3D assets. Perfect for designers",
+	"categories": [
+		"3D",
+		"AI"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Hunyuan3D-2.1 3D Model Generator",
+		"Tencent",
+		"Hunyuan3D 2 1"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/tencent/hunyuan3d-2-1#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

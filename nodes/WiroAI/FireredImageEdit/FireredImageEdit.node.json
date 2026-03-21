@@ -1,0 +1,31 @@
+{
+	"node": "fireredImageEdit",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "FireRed Image Edit tool for AI image generation. Edit & create images with text prompts. Perfec",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"FireRed Image Edit",
+		"Fireredteam",
+		"Firered Image Edit"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/fireredteam/firered-image-edit#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

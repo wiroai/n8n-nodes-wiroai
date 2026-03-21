@@ -1,0 +1,30 @@
+{
+	"node": "mossTtsd",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "MOSS-TTSD is a production long-form dialogue model for expressive multi-speaker conversational",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"MOSS-TTSD",
+		"Openmoss",
+		"Moss Ttsd"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/openmoss/moss-ttsd#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

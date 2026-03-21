@@ -1,0 +1,30 @@
+{
+	"node": "realtimeConversationalAi",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Build real-time conversational AI with ElevenLabs' voice agent. Configure voice, language, and",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Realtime Conversational AI by ElevenLabs",
+		"Elevenlabs",
+		"Realtime Conversational Ai"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/elevenlabs/realtime-conversational-ai#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

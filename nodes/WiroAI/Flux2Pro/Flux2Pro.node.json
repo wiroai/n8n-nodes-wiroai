@@ -1,0 +1,30 @@
+{
+	"node": "flux2Pro",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Experience the highest fidelity with the Flux 2 Pro  API. Delivers unrivaled photorealism and p",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Black Forest Labs",
+		"Flux 2 Pro"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/black-forest-labs/flux-2-pro#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

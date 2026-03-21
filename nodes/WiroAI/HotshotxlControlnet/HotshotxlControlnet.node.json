@@ -1,0 +1,29 @@
+{
+	"node": "hotshotxlControlnet",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Hotshot-XL is a tool that allows you to generate GIFs from given text. Additionally, it can be",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Generate GIF Advanced",
+		"Hotshotxl Controlnet"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/hotshotxl-controlnet#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

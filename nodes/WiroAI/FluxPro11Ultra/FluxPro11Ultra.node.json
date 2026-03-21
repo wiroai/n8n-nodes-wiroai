@@ -1,0 +1,29 @@
+{
+	"node": "fluxPro11Ultra",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "A state-of-the-art text-based image editing model that delivers high-quality outputs with excel",
+	"categories": [
+		"AI",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Black Forest Labs",
+		"Flux Pro 1 1 Ultra"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/black-forest-labs/flux-pro-1-1-ultra#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"node": "nanoBanana",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Google's Gemini 2.5 Flash Image Preview, also known as Nano Banana, model for text-to-image and",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Nano Banana API: Create Mobile & Web Apps with Nano Banana",
+		"Google",
+		"Nano Banana"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/google/nano-banana#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

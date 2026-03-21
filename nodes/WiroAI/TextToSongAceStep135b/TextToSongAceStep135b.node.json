@@ -1,0 +1,31 @@
+{
+	"node": "textToSongAceStep135b",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generate high-quality songs from text prompts in seconds. Whether you're crafting instrumental",
+	"categories": [
+		"AI",
+		"Audio",
+		"Music"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Text To Song",
+		"Ace Step",
+		"Text To Song Ace Step V1 3 5B"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/ace-step/text-to-song-ace-step-v1-3-5b#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

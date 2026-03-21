@@ -1,0 +1,30 @@
+{
+	"node": "hailuo23Fast",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Experience the MiniMax Hailuo 2.3 Fast API — optimized for low latency, stable motion, and scal",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"MiniMax Hailuo 2.3 Fast",
+		"Minimax",
+		"Hailuo 2 3 Fast"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/minimax/hailuo-2-3-fast#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

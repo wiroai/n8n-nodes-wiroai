@@ -12,14 +12,14 @@ import { pollTaskUntilComplete } from '../utils/polling';
 
 export class FluxKontextPro implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Wiro - Image-to-Image (Flux Kontext Pro)',
+		displayName: 'Wiro - Flux Kontext Pro',
 		name: 'fluxKontextPro',
 		icon: { light: 'file:wiro.svg', dark: 'file:wiro.svg' },
 		group: ['transform'],
 		version: 1,
-		description: 'Applies artistic or conceptual transformations to images via Flux Kontext Pro',
+		description: 'A state-of-the-art text-based image editing model that delivers high-quality outputs with excel',
 		defaults: {
-			name: 'Wiro - Image-to-Image (Flux Kontext Pro)',
+			name: 'Wiro - Flux Kontext Pro',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
@@ -32,41 +32,46 @@ export class FluxKontextPro implements INodeType {
 		],
 		properties: [
 			{
-				displayName: 'Enter Your Image URL',
+				displayName: 'Image URL',
 				name: 'inputImageUrl',
 				type: 'string',
 				default: '',
-				required: true,
-				description: 'Choose an image to apply the prompt transformation',
+				description: 'Image to use as reference. Must be jpeg, png.',
 			},
 			{
 				displayName: 'Prompt',
 				name: 'prompt',
 				type: 'string',
-				default: 'Make this a 90s cartoon',
-				required: true,
-				description: "Describe how you'd like the image to be transformed",
+				default: '',
+				description: 'Text prompt for image generation',
 			},
 			{
 				displayName: 'Prompt Upsampling',
 				name: 'promptUpsampling',
-				type: 'boolean',
-				default: false,
-				description: 'Whether to improve prompt detail quality',
+				type: 'options',
+				default: 'false',
+				description: 'Whether to perform upsampling on the prompt. If active, automatically modifies the prompt for more creative generation.',
+				options: [
+					{ name: 'NO', value: 'false' },
+					{ name: 'YES', value: 'true' },
+				],
 			},
 			{
 				displayName: 'Safety Tolerance',
 				name: 'safetyTolerance',
-				type: 'string',
+				type: 'options',
 				default: '2',
-				description: 'Set the safety filter level (e.g. 1 = strict, 2 = normal, 3 = loose)',
+				description: 'Tolerance level for input and output moderation. Between 0 and 6, 0 being most strict, 6 being least strict.',
+				options: [
+					{ name: '2', value: '2' },
+				],
 			},
 			{
 				displayName: 'Aspect Ratio',
 				name: 'aspectRatio',
 				type: 'options',
-				default: '',
-				description: 'Define the aspect ratio like 16:9, 1:1, etc',
+				default: '1:1',
+				description: 'Aspect ratio of the image',
 				options: [
 					{ name: '1:1', value: '1:1' },
 					{ name: '1:2', value: '1:2' },
@@ -88,15 +93,19 @@ export class FluxKontextPro implements INodeType {
 				displayName: 'Seed',
 				name: 'seed',
 				type: 'string',
-				default: '3104308',
-				description: 'Set a fixed seed for reproducibility',
+				default: '',
+				description: 'Seed-help',
 			},
 			{
 				displayName: 'Output Format',
 				name: 'outputFormat',
-				type: 'string',
+				type: 'options',
 				default: 'jpeg',
-				description: 'Specify output format like jpeg or png',
+				description: 'Output format for the generated image. Can be \'jpeg\' or \'png\'.',
+				options: [
+					{ name: 'Jpeg', value: 'jpeg' },
+					{ name: 'Png', value: 'png' },
+				],
 			},
 		],
 	};
@@ -104,13 +113,13 @@ export class FluxKontextPro implements INodeType {
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const returnData: INodeExecutionData[] = [];
 
-		const inputImageUrl = this.getNodeParameter('inputImageUrl', 0) as string;
-		const prompt = this.getNodeParameter('prompt', 0) as string;
-		const promptUpsampling = this.getNodeParameter('promptUpsampling', 0) as boolean;
-		const safetyTolerance = this.getNodeParameter('safetyTolerance', 0) as string;
-		const aspectRatio = this.getNodeParameter('aspectRatio', 0) as string;
-		const seed = this.getNodeParameter('seed', 0) as string;
-		const outputFormat = this.getNodeParameter('outputFormat', 0) as string;
+		const inputImageUrl = this.getNodeParameter('inputImageUrl', 0, '') as string;
+		const prompt = this.getNodeParameter('prompt', 0, '') as string;
+		const promptUpsampling = this.getNodeParameter('promptUpsampling', 0, '') as string;
+		const safetyTolerance = this.getNodeParameter('safetyTolerance', 0, '') as string;
+		const aspectRatio = this.getNodeParameter('aspectRatio', 0, '') as string;
+		const seed = this.getNodeParameter('seed', 0, '') as string;
+		const outputFormat = this.getNodeParameter('outputFormat', 0, '') as string;
 
 		const credentials = await this.getCredentials('wiroApi');
 		const apiKey = credentials.apiKey as string;

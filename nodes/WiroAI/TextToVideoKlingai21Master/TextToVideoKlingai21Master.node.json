@@ -1,0 +1,29 @@
+{
+	"node": "textToVideoKlingai21Master",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "KlingAI v2.1 text to video generation tool. Generate 5s and 10s videos in 720p resolution at 30",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Klingai",
+		"Text To Video Klingai V2 1 Master"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/klingai/text-to-video-klingai-v2-1-master#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}
