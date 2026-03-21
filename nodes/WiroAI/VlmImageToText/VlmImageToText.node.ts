@@ -90,7 +90,7 @@ export class VlmImageToText implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/vlm-image-to-text',
 			headers: {
@@ -104,7 +104,6 @@ export class VlmImageToText implements INodeType {
 				prompt,
 				tokens: generationLength,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

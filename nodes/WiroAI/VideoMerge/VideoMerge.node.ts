@@ -59,7 +59,7 @@ export class VideoMerge implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/video-merge',
 			headers: {
@@ -70,7 +70,6 @@ export class VideoMerge implements INodeType {
 				inputVideoMultiple: inputVideoMultipleUrl,
 				inputVideoUrlMultiple,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

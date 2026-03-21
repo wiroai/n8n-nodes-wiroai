@@ -104,7 +104,7 @@ export class AiResumeCvEvaluatorJobdesc implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/AI-Resume-CV-Evaluator-JobDesc',
 			headers: {
@@ -119,7 +119,6 @@ export class AiResumeCvEvaluatorJobdesc implements INodeType {
 				outputType,
 				language,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

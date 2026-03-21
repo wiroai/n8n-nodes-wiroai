@@ -190,7 +190,7 @@ export class Wan26 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/alibaba/wan 2.6',
 			headers: {
@@ -213,7 +213,6 @@ export class Wan26 implements INodeType {
 				watermark,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

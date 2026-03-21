@@ -109,7 +109,7 @@ export class ImageToVideoKlingai16 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/klingai/image-to-video-klingai-v1.6',
 			headers: {
@@ -125,7 +125,6 @@ export class ImageToVideoKlingai16 implements INodeType {
 				videoMode,
 				scale,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

@@ -252,7 +252,7 @@ export class TextToSongAceStep15 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/ACE-Step/text-to-song-ACE-Step1.5',
 			headers: {
@@ -277,7 +277,6 @@ export class TextToSongAceStep15 implements INodeType {
 				instrumental,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

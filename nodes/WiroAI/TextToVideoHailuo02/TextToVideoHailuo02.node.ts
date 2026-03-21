@@ -88,7 +88,7 @@ export class TextToVideoHailuo02 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/MiniMax/text-to-video-hailuo-02',
 			headers: {
@@ -101,7 +101,6 @@ export class TextToVideoHailuo02 implements INodeType {
 				resolution,
 				duration,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

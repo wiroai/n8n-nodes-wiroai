@@ -117,7 +117,7 @@ export class AniPortraitPose2video implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/ani-portrait-pose2video',
 			headers: {
@@ -135,7 +135,6 @@ export class AniPortraitPose2video implements INodeType {
 				cfg,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

@@ -120,7 +120,7 @@ export class Flux2Flex implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/black-forest-labs/flux-2-flex',
 			headers: {
@@ -138,7 +138,6 @@ export class Flux2Flex implements INodeType {
 				steps,
 				outputFormat,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

@@ -167,7 +167,7 @@ export class Veo31 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/google/veo3.1',
 			headers: {
@@ -188,7 +188,6 @@ export class Veo31 implements INodeType {
 				seed,
 				durationSeconds,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

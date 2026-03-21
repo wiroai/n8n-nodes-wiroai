@@ -191,7 +191,7 @@ export class Trellis2 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/microsoft/Trellis-2',
 			headers: {
@@ -217,7 +217,6 @@ export class Trellis2 implements INodeType {
 				tex_guidance_rescale,
 				tex_rescale_t,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

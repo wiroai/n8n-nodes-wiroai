@@ -52,7 +52,7 @@ export class Nemotron implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/nvidia/nemotron',
 			headers: {
@@ -62,7 +62,6 @@ export class Nemotron implements INodeType {
 			body: {
 				inputAudioUrl,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

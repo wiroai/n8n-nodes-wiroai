@@ -129,7 +129,7 @@ export class VirtualTryOn2 implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/Virtual Try-On-V2',
 			headers: {
@@ -145,7 +145,6 @@ export class VirtualTryOn2 implements INodeType {
 				ratio,
 				outputType,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

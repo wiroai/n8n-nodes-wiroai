@@ -116,7 +116,7 @@ export class Gemini25Flash implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/google/gemini-2-5-flash',
 			headers: {
@@ -134,7 +134,6 @@ export class Gemini25Flash implements INodeType {
 				topP,
 				maxOutputTokens,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

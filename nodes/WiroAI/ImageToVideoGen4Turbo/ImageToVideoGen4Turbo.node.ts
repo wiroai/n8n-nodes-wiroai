@@ -118,7 +118,7 @@ export class ImageToVideoGen4Turbo implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/Runway/image-to-video-gen4-turbo',
 			headers: {
@@ -134,7 +134,6 @@ export class ImageToVideoGen4Turbo implements INodeType {
 				contentModeration,
 				seed,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

@@ -75,7 +75,7 @@ export class TranslateGemma4bItImage implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/google/translate-gemma-4b-it-image',
 			headers: {
@@ -88,7 +88,6 @@ export class TranslateGemma4bItImage implements INodeType {
 				targetLng,
 				maxNewTokens,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

@@ -114,7 +114,7 @@ export class RealEsrgan implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/xinntao/Real-ESRGAN',
 			headers: {
@@ -131,7 +131,6 @@ export class RealEsrgan implements INodeType {
 				prePad,
 				denoiseStrength,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

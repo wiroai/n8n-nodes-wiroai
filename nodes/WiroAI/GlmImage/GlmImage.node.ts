@@ -108,7 +108,7 @@ export class GlmImage implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/zai-org/GLM-IMAGE',
 			headers: {
@@ -125,7 +125,6 @@ export class GlmImage implements INodeType {
 				width,
 				height,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

@@ -165,7 +165,7 @@ export class ControlnetSd implements INodeType {
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
 
-		const response = await this.helpers.request({
+			const response = await this.helpers.httpRequest({
 			method: 'POST',
 			url: 'https://api.wiro.ai/v1/Run/wiro/controlnet-sd',
 			headers: {
@@ -187,7 +187,6 @@ export class ControlnetSd implements INodeType {
 				width,
 				height,
 			},
-			json: true,
 		});
 
 		if (!response?.taskid || !response?.socketaccesstoken) {

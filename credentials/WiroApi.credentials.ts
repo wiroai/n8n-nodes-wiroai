@@ -1,4 +1,9 @@
-import { ICredentialType, INodeProperties } from 'n8n-workflow';
+import {
+	IAuthenticateGeneric,
+	ICredentialTestRequest,
+	ICredentialType,
+	INodeProperties,
+} from 'n8n-workflow';
 
 export class WiroApi implements ICredentialType {
 	name = 'wiroApi';
@@ -46,4 +51,25 @@ export class WiroApi implements ICredentialType {
 			},
 		},
 	];
+
+	authenticate: IAuthenticateGeneric = {
+		type: 'generic',
+		properties: {
+			headers: {
+				'x-api-key': '={{$credentials.apiKey}}',
+			},
+		},
+	};
+
+	test: ICredentialTestRequest = {
+		request: {
+			method: 'POST',
+			baseURL: 'https://api.wiro.ai',
+			url: '/v1/Task/Detail',
+			body: { tasktoken: 'test' },
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		},
+	};
 }
