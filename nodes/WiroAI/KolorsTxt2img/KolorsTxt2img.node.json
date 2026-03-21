@@ -1,0 +1,28 @@
+{
+	"node": "kolorsTxt2img",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Kolors text to image tool",
+	"categories": [
+		"AI",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Kolors Txt2Img"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/kolors-txt2img#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

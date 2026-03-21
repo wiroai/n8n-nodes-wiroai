@@ -1,0 +1,30 @@
+{
+	"node": "outpaintingSdxl",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Outpainting is the process to extend beyond the boundaries of an existing image canvas",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Outpainting",
+		"Outpainting Sdxl"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/outpainting-sdxl#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

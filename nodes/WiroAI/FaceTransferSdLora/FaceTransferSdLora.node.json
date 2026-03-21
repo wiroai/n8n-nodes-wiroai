@@ -1,0 +1,29 @@
+{
+	"node": "faceTransferSdLora",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Uses LoRA with stable diffusion to generate new photos from a given photo by prompt, keeping th",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Face Transfer Sd Lora"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/face-transfer-sd-lora#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

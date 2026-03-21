@@ -1,0 +1,30 @@
+{
+	"node": "s2Pro",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Fish Audio S2 Pro delivers fast, natural-sounding text-to-speech with voice cloning. Ideal for",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Fish Audio S2 Pro TTS Model",
+		"Fishaudio",
+		"S2 Pro"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/fishaudio/s2-pro#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

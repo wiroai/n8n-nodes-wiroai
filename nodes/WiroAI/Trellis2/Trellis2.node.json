@@ -1,0 +1,30 @@
+{
+	"node": "trellis2",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generate high-quality 3D meshes from images with Trellis-2 AI. Perfect for 3D modeling, gaming,",
+	"categories": [
+		"3D",
+		"AI"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Trellis-2 3D Mesh Generator",
+		"Microsoft",
+		"Trellis 2"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/microsoft/trellis-2#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

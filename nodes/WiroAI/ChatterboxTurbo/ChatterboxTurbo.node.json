@@ -1,0 +1,29 @@
+{
+	"node": "chatterboxTurbo",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "The fastest open source TTS model without sacrificing quality.",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Resemble Ai",
+		"Chatterbox Turbo"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/resemble-ai/chatterbox-turbo#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

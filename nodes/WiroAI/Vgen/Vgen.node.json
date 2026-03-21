@@ -1,0 +1,29 @@
+{
+	"node": "vgen",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "It turns the input image into an animated form by applying the prompt",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Vgen"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/vgen#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

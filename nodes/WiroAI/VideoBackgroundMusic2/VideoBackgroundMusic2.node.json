@@ -1,0 +1,29 @@
+{
+	"node": "videoBackgroundMusic2",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "It turns any video into a cinematic experience by generating AI-powered instrumental soundtrack",
+	"categories": [
+		"AI",
+		"Audio",
+		"Music"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Video Background Music V2"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/video-background-music-v2#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

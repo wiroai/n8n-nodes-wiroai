@@ -1,0 +1,28 @@
+{
+	"node": "trainSdLora",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "LoRA training is a low-rank adaptation technique used to fine-tune Stable Diffusion (SD) models",
+	"categories": [
+		"AI",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Train Sd Lora"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/train-sd-lora#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"node": "sdControlnetQrpattern",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "QR code art generator enables the creation of QR code art based on a provided prompt and black",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Sd Controlnet Qrpattern"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/sd-controlnet-qrpattern#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

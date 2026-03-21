@@ -1,0 +1,28 @@
+{
+	"node": "aiResumeCvParser",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Wiro/AI-Resume-CV-Parser, effortlessly extract and structure data from resumes (CVs), PDF, Word",
+	"categories": [
+		"AI",
+		"Utility"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Ai Resume Cv Parser"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/ai-resume-cv-parser#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

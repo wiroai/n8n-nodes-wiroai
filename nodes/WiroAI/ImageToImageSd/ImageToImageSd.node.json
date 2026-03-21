@@ -1,0 +1,29 @@
+{
+	"node": "imageToImageSd",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "An image-to-image model that re-generates images to AI art images with prompt",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Image To Image Sd"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/image-to-image-sd#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

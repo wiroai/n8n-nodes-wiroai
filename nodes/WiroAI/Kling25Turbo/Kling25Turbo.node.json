@@ -1,0 +1,29 @@
+{
+	"node": "kling25Turbo",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Kling v2.5 Turbo is the high-efficiency variant optimized for speed and cost-effectiveness with",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Klingai",
+		"Kling V2 5 Turbo"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/klingai/kling-v2-5-turbo#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

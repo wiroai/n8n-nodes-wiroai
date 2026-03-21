@@ -1,0 +1,29 @@
+{
+	"node": "videoMerge",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Merge multiple videos into one seamlessly using either file uploads or video URLs. This tool co",
+	"categories": [
+		"AI",
+		"Utility",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Video Merge"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/video-merge#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

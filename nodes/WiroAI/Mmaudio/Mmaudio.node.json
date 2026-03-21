@@ -1,0 +1,29 @@
+{
+	"node": "mmaudio",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "MMAudio generates synchronized audio for videos using AI. Enhance video content with matching s",
+	"categories": [
+		"AI",
+		"Utility"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"MMAudio - Video to Audio Generator",
+		"Mmaudio"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/mmaudio#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

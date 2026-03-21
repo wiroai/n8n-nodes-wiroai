@@ -1,0 +1,28 @@
+{
+	"node": "songFrame",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "SongFrame places you into a cinematic world, pulls the soundtrack directly from your YouTube li",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Song Frame"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/song-frame#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

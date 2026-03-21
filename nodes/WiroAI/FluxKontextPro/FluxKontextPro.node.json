@@ -3,26 +3,22 @@
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"icon": "wiro.svg",
-	"description": "Applies artistic or conceptual transformations to images via Flux Kontext Pro",
-	"categories": ["AI", "Image", "Utility", "Productivity", "Editing"],
+	"description": "A state-of-the-art text-based image editing model that delivers high-quality outputs with excel",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
 	"alias": [
 		"Wiro",
 		"WiroAI",
-		"Flux",
-		"Kontext",
-		"Image Style Transfer",
-		"Conceptual Art",
-		"Artistic Filter",
-		"Prompt-based Image Transformation",
-		"Flux Kontext Pro",
-		"Image-to-Image",
-		"Visual Concept",
-		"Style Remix"
+		"Black Forest Labs",
+		"Flux Kontext Pro"
 	],
 	"resources": {
 		"primaryDocumentation": [
 			{
-				"url": "https://wiro.ai/tools/black-forest-labs/flux-kontext-pro#apisamples-curl"
+				"url": "https://wiro.ai/models/black-forest-labs/flux-kontext-pro#apisamples-curl"
 			}
 		],
 		"credentialDocumentation": [

@@ -1,0 +1,30 @@
+{
+	"node": "personaplexRealtime",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "PersonaPlex AI enables speech-to-speech conversion with customizable voices. Perfect for conten",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"PersonaPlex - Speech-to-Speech Conversion",
+		"Nvidia",
+		"Personaplex Realtime"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/nvidia/personaplex-realtime#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

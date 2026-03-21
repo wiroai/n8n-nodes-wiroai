@@ -1,0 +1,28 @@
+{
+	"node": "pixartSigma",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "PixArt-Σ consists of pure transformer blocks for latent diffusion: It can directly generate 102",
+	"categories": [
+		"AI",
+		"Utility"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Pixart Sigma"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/pixart-sigma#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

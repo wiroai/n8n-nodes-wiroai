@@ -1,0 +1,28 @@
+{
+	"node": "aiLeaveAnalysis",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Wiro/AI-Leave-Analysis enables you to analyze and evaluate employee leave patterns and data usi",
+	"categories": [
+		"AI",
+		"Utility"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Ai Leave Analysis"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/ai-leave-analysis#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

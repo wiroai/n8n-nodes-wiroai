@@ -1,0 +1,28 @@
+{
+	"node": "trainFluxLora",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "LoRA training is a low-rank adaptation technique used to fine-tune FLUX models, enabling person",
+	"categories": [
+		"AI",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Train Flux Lora"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/train-flux-lora#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

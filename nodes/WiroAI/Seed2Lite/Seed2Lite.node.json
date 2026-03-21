@@ -1,0 +1,31 @@
+{
+	"node": "seed2Lite",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generate visual content with Seed-V2-Lite, a lightweight LLM from ByteDance. Perfect for creati",
+	"categories": [
+		"AI",
+		"Chat",
+		"LLM"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Seed-V2-Lite Text-to-Image Generator",
+		"Bytedance",
+		"Seed V2 Lite"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/seed-v2-lite#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

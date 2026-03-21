@@ -1,0 +1,29 @@
+{
+	"node": "seedancePro15",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "A video generation model",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Bytedance",
+		"Seedance Pro V1 5"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/seedance-pro-v1-5#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

@@ -7,6 +7,22 @@ export class WiroApi implements ICredentialType {
 
 	properties: INodeProperties[] = [
 		{
+			displayName: 'Authentication Method',
+			name: 'authMethod',
+			type: 'options',
+			default: 'signatureBased',
+			options: [
+				{
+					name: 'Signature-Based (Recommended)',
+					value: 'signatureBased',
+				},
+				{
+					name: 'API Key Only (Simple)',
+					value: 'apiKeyOnly',
+				},
+			],
+		},
+		{
 			displayName: 'API Key',
 			name: 'apiKey',
 			type: 'string',
@@ -23,6 +39,11 @@ export class WiroApi implements ICredentialType {
 				password: true,
 			},
 			default: '',
+			displayOptions: {
+				show: {
+					authMethod: ['signatureBased'],
+				},
+			},
 		},
 	];
 }

@@ -1,0 +1,28 @@
+{
+	"node": "kolorsIpAdapterFaceIdPlus",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Kolors image-to-image ai tool with use IP Adapter",
+	"categories": [
+		"AI",
+		"Utility"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Kolors Ip Adapter Face Id Plus"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/kolors-ip-adapter-face-id-plus#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

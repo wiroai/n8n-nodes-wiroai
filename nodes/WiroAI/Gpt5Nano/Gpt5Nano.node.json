@@ -1,0 +1,31 @@
+{
+	"node": "gpt5Nano",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Access GPT-5 Nano API by OpenAI on Wiro. Simple integration, transparent pricing, and comprehen",
+	"categories": [
+		"AI",
+		"Chat",
+		"LLM"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"GPT-5 Nano AI Model",
+		"Openai",
+		"Gpt 5 Nano"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/openai/gpt-5-nano#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

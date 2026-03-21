@@ -1,0 +1,28 @@
+{
+	"node": "textToImageSdLora",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "A text-to-image tool capable of generating images using a Stable Diffusion model and LoRA",
+	"categories": [
+		"AI",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Text To Image Sd Lora"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/text-to-image-sd-lora#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

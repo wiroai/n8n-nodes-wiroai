@@ -1,0 +1,29 @@
+{
+	"node": "seedancePro1",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "An video generation model that offers 5s or 10s videos, at 480p and 1080p resolution",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Bytedance",
+		"Seedance Pro V1"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/seedance-pro-v1#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

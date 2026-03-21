@@ -1,0 +1,29 @@
+{
+	"node": "textToSongWithReferenceYue",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Turn any song into your own with AI. Simply upload a reference track and provide your custom ly",
+	"categories": [
+		"AI",
+		"Audio",
+		"Music"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Text To Song With Reference Yue"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/text-to-song-with-reference-yue#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

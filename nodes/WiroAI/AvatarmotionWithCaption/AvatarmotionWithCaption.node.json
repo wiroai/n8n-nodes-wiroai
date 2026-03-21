@@ -1,0 +1,29 @@
+{
+	"node": "avatarmotionWithCaption",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generate avatars from photos and animate them into engaging videos in one seamless pipeline",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Avatar Motion",
+		"Avatarmotion With Caption"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/avatarmotion-with-caption#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

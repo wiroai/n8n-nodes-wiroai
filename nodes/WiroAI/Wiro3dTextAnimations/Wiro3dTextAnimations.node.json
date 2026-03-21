@@ -1,0 +1,29 @@
+{
+	"node": "wiro3dTextAnimations",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "AI-powered 3D Text Animations API transforms text into captivating animated videos. Features 22",
+	"categories": [
+		"AI",
+		"Productivity",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"3D Text Animations"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/3d-text-animations#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

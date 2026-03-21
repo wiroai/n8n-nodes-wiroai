@@ -1,0 +1,31 @@
+{
+	"node": "seed2Mini",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Explore the Seed-V2 Mini LLM by ByteDance, designed for efficient AI inference and NLP tasks. P",
+	"categories": [
+		"AI",
+		"Chat",
+		"LLM"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Seed-V2 Mini LLM",
+		"Bytedance",
+		"Seed V2 Mini"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/seed-v2-mini#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

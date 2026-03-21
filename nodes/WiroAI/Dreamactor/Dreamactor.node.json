@@ -1,0 +1,30 @@
+{
+	"node": "dreamactor",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generate videos from images with DreamActor AI by ByteDance. Perfect for creating animated cont",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"DreamActor - Image-to-Video Generation",
+		"Bytedance",
+		"Dreamactor"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/dreamactor#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

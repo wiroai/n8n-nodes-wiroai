@@ -1,0 +1,28 @@
+{
+	"node": "textToImageSdxl",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "A text-to-image tool capable of generating images using a diffusion XL model",
+	"categories": [
+		"AI",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Text To Image Sdxl"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/text-to-image-sdxl#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

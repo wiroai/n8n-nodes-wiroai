@@ -1,0 +1,28 @@
+{
+	"node": "aiResumeCvEvaluatorSkillsets",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Wiro/AI-Resume-CV-Evaluator-SkillSet enables you to analyze and score resumes (CVs) based on sp",
+	"categories": [
+		"AI",
+		"Utility"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Ai Resume Cv Evaluator Skillsets"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/ai-resume-cv-evaluator-skillsets#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

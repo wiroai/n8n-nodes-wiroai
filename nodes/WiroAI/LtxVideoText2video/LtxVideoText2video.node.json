@@ -1,0 +1,30 @@
+{
+	"node": "ltxVideoText2video",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "LTX-Video is the first DiT-based video generation model capable of generating high-quality vide",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"LTX Text to Video",
+		"Wiroai",
+		"Ltx Video Text2Video"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiroai/ltx-video-text2video#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

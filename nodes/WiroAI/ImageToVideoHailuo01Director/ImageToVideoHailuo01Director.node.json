@@ -1,0 +1,29 @@
+{
+	"node": "imageToVideoHailuo01Director",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "MiniMax/image-to-video-01-director is an experimental model that generates short, 6-second vide",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Minimax",
+		"Image To Video Hailuo 01 Director"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/minimax/image-to-video-hailuo-01-director#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"node": "gemini3Pro",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Gemini 3 Pro by Google is an advanced AI model for complex reasoning and natural language tasks",
+	"categories": [
+		"AI",
+		"Chat",
+		"LLM"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Gemini 3 Pro - Google AI Model",
+		"Google",
+		"Gemini 3 Pro"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/google/gemini-3-pro#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

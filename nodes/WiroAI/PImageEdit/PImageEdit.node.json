@@ -1,0 +1,31 @@
+{
+	"node": "pImageEdit",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "P-Image-Edit by Pruna-AI is a lightning-fast image-to-image API for instant edits, style transf",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Pruna P-Image Edit Image-to-Image API, Pricing and Docs",
+		"Pruna",
+		"P Image Edit"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/pruna/p-image-edit#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

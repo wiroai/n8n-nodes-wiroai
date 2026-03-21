@@ -1,0 +1,28 @@
+{
+	"node": "kokoroTts",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Kokoro is a high-speed text-to-speech model that delivers clean, accurate, and natural-sounding",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Kokoro Tts"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/kokoro-tts#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

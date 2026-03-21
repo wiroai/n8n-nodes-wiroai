@@ -1,0 +1,28 @@
+{
+	"node": "voiceClone",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "A text-to-speech tool by Coqui that generates natural-sounding speech from text and performs vo",
+	"categories": [
+		"AI",
+		"Audio"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Voice Clone"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/voice-clone#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

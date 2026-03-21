@@ -3,26 +3,21 @@
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"icon": "wiro.svg",
-	"description": "Ask questions and get instant answers from any YouTube video using Wiro’s RAG AI",
-	"categories": ["AI", "Utility", "Productivity", "Text", "YouTube", "Chat"],
+	"description": "Extract insights directly from YouTube videos by simply providing a URL. Choose your LLM model,",
+	"categories": [
+		"AI",
+		"Chat",
+		"LLM"
+	],
 	"alias": [
 		"Wiro",
 		"WiroAI",
-		"YouTube QA",
-		"RAG YouTube",
-		"Ask YouTube",
-		"LLM RAG",
-		"Wiro Chat",
-		"YouTube AI",
-		"Video Q&A",
-		"RAG Assistant",
-		"Chat With Video",
-		"Wiro YouTube Chat"
+		"Rag Chat Youtube"
 	],
 	"resources": {
 		"primaryDocumentation": [
 			{
-				"url": "https://wiro.ai/tools/wiro/rag-chat-youtube#apisamples-curl"
+				"url": "https://wiro.ai/models/wiro/rag-chat-youtube#apisamples-curl"
 			}
 		],
 		"credentialDocumentation": [

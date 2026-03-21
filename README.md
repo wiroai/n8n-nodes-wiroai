@@ -2,35 +2,29 @@
 
 # n8n-nodes-wiroai
 
-A [n8n](https://n8n.io) community node pack that gives you access to [Wiro AI](https://wiro.ai)’s powerful generative tools directly in your workflows.
+A [n8n](https://n8n.io) community node pack that gives you access to **290+ AI models** from [Wiro AI](https://wiro.ai) directly in your workflows — video generation, image creation, audio/speech, LLMs, 3D, and more.
 
 <img src="https://wiro.ai/images/illustrations/koala-404.png" alt="Wiro Koala" width="50"/>
 
 ---
 
-## ✨ Features
+## Features
 
-- 🗣️ Text-to-Speech
-- 🎵 Background Music Generator
-- 🧠 Chatbot (with and without RAG)
-- 🖼️ Text-to-Image
-- 🎞️ Text-to-Video
-- 🧼 Remove Background
-- 🛋️ Interior Design Reimagining
-- 🎥 Image-to-Video (KlingAI)
-- 📄 OCR (Text from Image)
-- 📈 Resume/CV Evaluator with Job Description
-- 🖌️ Image Restoration and Upscaling
-- 📱 4K Mobile Wallpaper Generator
-- 🎬 Shorts / Reels Generator
-- 📹 Add Background Music to Video
-- 🌀 Flux Kontext Pro / Max image stylizers
+- **Video Generation** — Sora 2, Veo 3, Kling V3, Seedance, Hailuo, PixVerse, Runway, and more
+- **Image Generation** — Imagen V4, Flux 2 Pro, Seedream, Nano Banana, SDXL, and more
+- **Image Editing** — Virtual Try-On, Face Swap, Background Removal, Inpainting, Style Transfer
+- **Audio & Speech** — ElevenLabs TTS, Gemini TTS, Whisper STT, Voice Clone, Music Generation
+- **LLM Chat** — GPT-5, Gemini 3, Qwen 3.5, RAG Chat (YouTube, GitHub, Website, Documents)
+- **3D Generation** — Trellis 2, Hunyuan3D 2.1
+- **Translation** — Gemma-based translation (4B, 12B, 27B) with image support
+- **E-Commerce** — Product Photoshoot, Product Ads, Shopify Templates, UGC Creator
+- **HR Tools** — CV Evaluator, Resume Parser, Job Description Generator, Exit Interview, Culture Fit
 
 Each tool is implemented as a **separate node** for modular and easy use.
 
 ---
 
-## 📦 Installation
+## Installation
 
 Follow the [n8n community nodes guide](https://docs.n8n.io/integrations/community-nodes/installation/) to install this package.
 
@@ -40,149 +34,67 @@ npm install @wiro-ai/n8n-nodes-wiroai
 
 ---
 
-## 🛠 Operations
+## Authentication
 
-| Node                        | Description                                        |
-| --------------------------- | -------------------------------------------------- |
-| `AskAiChatbot`              | General-purpose chat assistant powered by LLMs     |
-| `CvEvaluatorJobdesc`        | Evaluate resumes/CVs against job descriptions      |
-| `EasyOcr`                   | Extract text from images using OCR                 |
-| `FluxKontextPro`            | Apply stylized prompts to input images             |
-| `FluxKontextMax`            | Clean and enhance product-style visuals            |
-| `GenerateBackgroundMusic`   | Generate background audio from prompts             |
-| `GenerateSpeechTTS`         | Convert text to audio using speech synthesis       |
-| `ImageToVideoKling16`       | Animate image pairs into video using KlingAI       |
-| `InteriorDesignGenerator`   | Reimagine interior spaces with descriptive prompts |
-| `MobileWallpaperGenerator`  | Generate 4K mobile phone wallpapers                |
-| `RagChatYoutube`            | Ask questions to YouTube videos using RAG + LLM    |
-| `RemoveImageBackground`     | Strip background from uploaded images              |
-| `RestoreUpscaleImage`       | Restore and upscale low-quality images             |
-| `ShortsReelsVideoGenerator` | Generate vertical videos for Shorts/Reels          |
-| `TextToImage`               | Convert descriptive text to images                 |
-| `TextToVideoKling16`        | Convert text to video using KlingAI engine         |
-| `TextToVideoWan21`          | Generate video from text via WAN2.1                |
-| `VideoBgMusicGenerator`     | Automatically compose music for your videos        |
+Wiro supports two authentication methods:
 
----
+### Signature-Based (Recommended)
+Uses HMAC-SHA256 to sign every request. The API secret never leaves your environment.
 
-## 🔐 Credentials
+### API Key Only (Simple)
+Just include the API key — no signature required. Best for server-side applications.
 
-You’ll need a Wiro API Key and Secret.
-
-**Steps:**
+**Setup:**
 
 1. Go to [wiro.ai](https://wiro.ai) and sign up
-2. Create a project [wiro.ai/panel/project/](https://wiro.ai/panel/project/) and get your API credentials
-3. In n8n → Credentials → Add new → **Wiro API**
-4. Enter your key and secret values
+2. Create a project at [wiro.ai/panel/project/](https://wiro.ai/panel/project/)
+3. Choose your authentication method (Signature-Based or API Key Only)
+4. In n8n, go to Credentials → Add new → **Wiro API**
+5. Select your auth method and enter your credentials
+
+See [Wiro Authentication Docs](https://wiro.ai/docs/#/authentication) for details.
 
 ---
 
-## 🚀 Usage Example
+## Usage Example
 
-To use the Text-to-Speech node:
+To generate a video with Sora 2 Pro:
 
-1. Add the `Generate Speech` node
+1. Add the **Wiro - Sora 2 Pro** node
 2. Set:
-   - Prompt: `Hello world!`
-   - Voice: `af_heart`
-   - Language: `a` (American English)
+   - Prompt: `A cat astronaut floating in space`
+   - Seconds: `8`
+   - Resolution: `1080p`
 3. Run the workflow
 
 **Output:**
 
 ```json
 {
-	"taskid": "abc123",
-	"status": "completed",
-	"url": "https://cdn1.wiro.ai/xyz/0.mp3"
+  "taskid": "abc123",
+  "status": "completed",
+  "url": "https://cdn1.wiro.ai/xyz/0.mp4"
 }
 ```
 
 ---
 
-## 🧠 Compatibility
+## Compatibility
 
 - Requires: `n8n v1.0+`
 - Node.js: `v18+`
 
 ---
 
-## 📁 Folder Structure
-
-```
-nodes/WiroAI/
-├── AskAiChatbot/
-    ├── AskAiChatbot.nodes.ts
-    └── AskAiChatbot.nodes.json
-├── CvEvaluatorJobdesc/
-    ├── CvEvaluatorJobdesc.nodes.ts
-    └── CvEvaluatorJobdesc.nodes.json
-├── EasyOcr/
-    ├── EasyOcr.nodes.ts
-    └── EasyOcr.nodes.json
-├── FluxKontextMax/
-    ├── FluxKontextMax.nodes.ts
-    └── FluxKontextMax.nodes.json
-├── FluxKontextPro/
-    ├── FluxKontextPro.nodes.ts
-    └── FluxKontextPro.nodes.json
-├── GenerateBackgroundMusic/
-    ├── GenerateBackgroundMusic.nodes.ts
-    └── GenerateBackgroundMusic.nodes.json
-├── GenerateSpeechTts/
-    ├── GenerateSpeechTts.nodes.ts
-    └── GenerateSpeechTts.nodes.json
-├── ImageToVideoKling16/
-    ├── ImageToVideoKling16.nodes.ts
-    └── ImageToVideoKling16.nodes.json
-├── InteriorDesignGenerator/
-    ├── InteriorDesignGenerator.nodes.ts
-    └── InteriorDesignGenerator.nodes.json
-├── MobileWallpaperGenerator/
-    ├── MobileWallpaperGenerator.nodes.ts
-    └── MobileWallpaperGenerator.nodes.json
-├── RagChatYoutube/
-    ├── RagChatYoutube.nodes.ts
-    └── RagChatYoutube.nodes.json
-├── RemoveImageBackground/
-    ├── RemoveImageBackground.nodes.ts
-    └── RemoveImageBackground.nodes.json
-├── RestoreUpscaleImage/
-    ├── RestoreUpscaleImage.nodes.ts
-    └── RestoreUpscaleImage.nodes.json
-├── ShortsReelsVideoGenerator/
-    ├── ShortsReelsVideoGenerator.nodes.ts
-    └── ShortsReelsVideoGenerator.nodes.json
-├── TextToImage/
-    ├── TextToImage.nodes.ts
-    └── TextToImage.nodes.json
-├── TextToVideoKling16/
-    ├── TextToVideoKling16.nodes.ts
-    └── TextToVideoKling16.nodes.json
-├── TextToVideoWan21/
-    ├── TextToVideoWan21.nodes.ts
-    └── TextToVideoWan21.nodes.json
-├── VideoBgMusicGenerator/
-    ├── VideoBgMusicGenerator.nodes.ts
-    └── VideoBgMusicGenerator.nodes.json
-└── utils/
-    ├── auth.ts
-    └── polling.ts
-credentials/
-└── WiroApi.credentials.ts
-```
-
----
-
-## 📚 Resources
+## Resources
 
 - [Wiro API Docs](https://wiro.ai/docs)
+- [Wiro Model Marketplace](https://wiro.ai/models)
 - [n8n Custom Node Docs](https://docs.n8n.io/integrations/creating-nodes/)
 - [Community Node Guide](https://docs.n8n.io/integrations/community-nodes/)
 
 ---
 
-## 📜 License
+## License
 
 [MIT](LICENSE.md)

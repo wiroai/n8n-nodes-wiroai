@@ -3,23 +3,20 @@
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
 	"icon": "wiro.svg",
-	"description": "Extracts text from images using AI",
-	"categories": ["AI", "Action in an app", "Utility", "Productivity", "OCR", "Image Processing"],
+	"description": "EasyOCR is the text-recognition model that identifies and extracts text from images",
+	"categories": [
+		"AI",
+		"Utility"
+	],
 	"alias": [
 		"Wiro",
 		"WiroAI",
-		"OCR",
-		"Text Extraction",
-		"Image to Text",
-		"Read Image Text",
-		"Document Scan",
-		"Extract From Image",
-		"Optical Character Recognition"
+		"Easy Ocr"
 	],
 	"resources": {
 		"primaryDocumentation": [
 			{
-				"url": "https://wiro.ai/tools/wiro/easy_ocr#apisamples-curl"
+				"url": "https://wiro.ai/models/wiro/easy-ocr#apisamples-curl"
 			}
 		],
 		"credentialDocumentation": [

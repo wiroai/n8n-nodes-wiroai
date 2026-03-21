@@ -1,0 +1,31 @@
+{
+	"node": "gpt52",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Access GPT-5-2 API by OpenAI on Wiro. Simple integration, transparent pricing, and comprehensiv",
+	"categories": [
+		"AI",
+		"Chat",
+		"LLM"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"GPT-5.2 AI Model",
+		"Openai",
+		"Gpt 5 2"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/openai/gpt-5-2#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

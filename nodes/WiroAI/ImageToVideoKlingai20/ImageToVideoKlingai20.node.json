@@ -1,0 +1,29 @@
+{
+	"node": "imageToVideoKlingai20",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "KlingAI v2.0 image to video generation tool. Generate 5s and 10s videos in 720p resolution at 3",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Klingai",
+		"Image To Video Klingai V2 0"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/klingai/image-to-video-klingai-v2-0#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

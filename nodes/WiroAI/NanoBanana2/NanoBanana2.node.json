@@ -1,0 +1,31 @@
+{
+	"node": "nanoBanana2",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Nano-Banana-2 by Google enables fast image editing with multi-reference support. Ideal for crea",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Nano-Banana-2 Image Editing Tool",
+		"Google",
+		"Nano Banana 2"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/google/nano-banana-2#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

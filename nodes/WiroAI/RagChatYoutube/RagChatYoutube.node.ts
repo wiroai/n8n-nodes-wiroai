@@ -12,14 +12,14 @@ import { pollTaskUntilComplete } from '../utils/polling';
 
 export class RagChatYoutube implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Wiro - Ask Questions to a YouTube Video With AI',
+		displayName: 'Wiro - Rag Chat Youtube',
 		name: 'ragChatYoutube',
 		icon: { light: 'file:wiro.svg', dark: 'file:wiro.svg' },
 		group: ['transform'],
 		version: 1,
-		description: 'Ask questions and get instant answers from any YouTube video using Wiro’s RAG AI',
+		description: 'Extract insights directly from YouTube videos by simply providing a URL. Choose your LLM model,',
 		defaults: {
-			name: 'Wiro - Ask Questions to a YouTube Video With AI',
+			name: 'Wiro - Rag Chat Youtube',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
@@ -32,196 +32,136 @@ export class RagChatYoutube implements INodeType {
 		],
 		properties: [
 			{
-				displayName: 'Website URL',
+				displayName: 'Select Model',
+				name: 'selectedModel',
+				type: 'options',
+				default: '',
+				description: 'Select-model-help',
+				options: [
+					{ name: '', value: '' },
+				],
+			},
+			{
+				displayName: 'Select Model Private',
+				name: 'selectedModelPrivate',
+				type: 'options',
+				default: '',
+				description: 'Select-model-private-help',
+				options: [
+				],
+			},
+			{
+				displayName: 'Youtube Video URL',
 				name: 'websiteUrl',
 				type: 'string',
-				default: 'https://youtube.com/watch?v=Yq0QkCxoTHM',
-				required: true,
-				description: 'The full URL of the YouTube video you want the AI to analyze and chat about',
+				default: '',
+				description: 'Enter a youtube video URL',
 			},
 			{
 				displayName: 'Prompt',
 				name: 'prompt',
 				type: 'string',
-				default: 'What is the YouTube video about?',
+				default: '',
 				required: true,
-				description: 'The question or message you want to ask about the YouTube video content',
+				description: 'Prompt to send to the model',
 			},
 			{
 				displayName: 'User ID',
 				name: 'user_id',
 				type: 'string',
 				default: '',
-				description: 'Optional user identifier for session continuity',
+				description: 'You can leave it blank. The user_id parameter is a unique identifier for the user. It is used to store and retrieve the chat history specific to that user. You should provide a value that uniquely identifies the user across different sessions. For example, it can be the user’s email address, username, or a system-generated ID',
 			},
 			{
 				displayName: 'Session ID',
 				name: 'session_id',
 				type: 'string',
 				default: '',
-				description: 'Optional session identifier for the chat history',
+				description: 'You can leave it blank. The session_id parameter represents a specific session for a user. It allows you to manage multiple sessions for the same user. If you want to maintain separate chat histories for different sessions of the same user, use a unique session_id for each session. If not specified or kept the same, the system will treat all interactions as part of the same session',
 			},
 			{
 				displayName: 'System Prompt',
 				name: 'system_prompt',
 				type: 'string',
-				default:
-					"You are a helpful, respectful and honest assistant. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature. If a question does not make any sense, or is not factually coherent, explain why instead of answering something not correct. If you don't know the answer to a question, please don't share false information.",
-				required: true,
-				description: 'Defines the AI assistant’s behavior and tone',
-			},
-			{
-				displayName: 'Selected Model',
-				name: 'selectedModel',
-				type: 'options',
-				default: '757',
-				required: true,
-				description: 'Select a LLM - Chat Model',
-				options: [
-					{ name: 'Qwen/Qwen2.5-14B-Instruct', value: '757' },
-					{ name: 'Qwen/Qwen2.5-32B-Instruct', value: '756' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B', value: '743' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-14B', value: '742' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Llama-8B', value: '741' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-7B', value: '740' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B', value: '739' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'utter-project/EuroLLM-9B-Instruct', value: '735' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'utter-project/EuroLLM-1.7B-Instruct', value: '734' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'm42-health/Llama3-Med42-8B', value: '730' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'meta-llama/Llama-3.2-3B-Instruct', value: '728' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'meta-llama/CodeLlama-34b-Instruct-hf', value: '726' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'meta-llama/CodeLlama-7b-Instruct-hf', value: '725' },
-					{ name: 'internlm/internlm3-8b-instruct', value: '720' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'CohereForAI/aya-expanse-8b', value: '719' },
-					{ name: 'mistralai/Mistral-Nemo-Instruct-2407', value: '717' },
-					{ name: 'HuggingFaceTB/SmolLM2-1.7B-Instruct', value: '716' },
-					{ name: 'mistralai/Mathstral-7B-v0.1', value: '714' },
-					{ name: 'deepseek-ai/deepseek-math-7b-instruct', value: '713' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'microsoft/Phi-3.5-mini-instruct', value: '712' },
-					{ name: 'Qwen/Qwen2.5-3B-Instruct', value: '711' },
-					{ name: 'Qwen/Qwen2.5-0.5B-Instruct', value: '710' },
-					{ name: 'Qwen/Qwen2.5-1.5B-Instruct', value: '709' },
-					{ name: 'Qwen/Qwen2-7B-Instruct', value: '692' },
-					{ name: 'Qwen/Qwen2.5-Math-7B-Instruct', value: '691' },
-					{ name: 'Qwen/Qwen2.5-Math-1.5B-Instruct', value: '690' },
-					{ name: 'Qwen/Qwen2.5-Coder-7B-Instruct', value: '689' },
-					{ name: 'Qwen/Qwen1.5-0.5B-Chat', value: '688' },
-					{ name: 'microsoft/phi-4', value: '686' },
-					{ name: 'Qwen/Qwen2.5-Coder-32B-Instruct', value: '685' },
-					{ name: 'google/gemma-2-2b-it', value: '684' },
-					{ name: 'google/gemma-2-9b-it', value: '683' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'meta-llama/Meta-Llama-3-8B-Instruct', value: '682' },
-					{ name: 'mistralai/Mistral-7B-Instruct-v0.3', value: '681' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'meta-llama/Llama-3.1-8B-Instruct', value: '680' },
-					{ name: 'Qwen/Qwen2.5-7B-Instruct', value: '679' },
-					{ name: 'wiro/wiroai-turkish-llm-8b', value: '676' },
-					{ name: 'wiro/wiroai-turkish-llm-9b', value: '675' },
-					// eslint-disable-next-line n8n-nodes-base/node-param-display-name-miscased
-					{ name: 'meta-llama/Llama-2-7b-chat-hf', value: '617' },
-				],
+				default: '',
+				description: 'System prompt to send to the model. This is prepended to the prompt and helps guide system behavior.',
 			},
 			{
 				displayName: 'Temperature',
 				name: 'temperature',
-				type: 'string',
-				default: '0.7',
-				required: true,
-				description: 'Adjusts randomness of outputs',
+				type: 'number',
+				default: 0,
+				description: 'Adjusts randomness of outputs, greater than 1 is random and 0 is deterministic, 0.75 is a good starting value',
 			},
 			{
 				displayName: 'Top P',
 				name: 'top_p',
-				type: 'string',
-				default: '0.95',
-				required: true,
-				description: 'Samples from the top p percentage of most likely tokens',
+				type: 'number',
+				default: 0,
+				description: 'When decoding text, samples from the top p percentage of most likely tokens; lower to ignore less likely tokens',
 			},
 			{
 				displayName: 'Top K',
 				name: 'top_k',
-				type: 'string',
-				default: '50',
-				required: true,
-				description: 'Samples from the top k most likely tokens',
+				type: 'number',
+				default: 0,
+				description: 'When decoding text, samples from the top k most likely tokens; lower to ignore less likely tokens',
 			},
 			{
 				displayName: 'Chunk Size',
 				name: 'chunk_size',
-				type: 'string',
-				default: '256',
-				required: true,
-				description: 'Size of text chunks in tokens',
+				type: 'number',
+				default: 0,
+				description: 'Defines the size (number of tokens) of each chunk of text that is retrieved and processed by the model during the retrieval phase. Larger values may improve context, but can increase processing time and memory usage.',
 			},
 			{
 				displayName: 'Chunk Overlap',
 				name: 'chunk_overlap',
-				type: 'string',
-				default: '25',
-				required: true,
-				description: 'Number of overlapping tokens between chunks',
+				type: 'number',
+				default: 0,
+				description: 'Specifies how many tokens from the previous chunk should overlap with the next chunk to ensure continuity and avoid missing important context. Higher overlap ensures smoother transitions but may result in redundant processing.',
 			},
 			{
 				displayName: 'Similarity Top K',
 				name: 'similarity_top_k',
-				type: 'string',
-				default: '5',
-				required: true,
-				description: 'Number of most relevant chunks used for context',
+				type: 'number',
+				default: 0,
+				description: 'Determines the number of most similar documents or chunks to retrieve based on their similarity scores. A higher value increases the amount of context provided but may also introduce irrelevant information.',
 			},
 			{
 				displayName: 'Context Window',
 				name: 'context_window',
-				type: 'string',
-				default: '0',
-				required: true,
-				description: 'Token limit for input context',
+				type: 'number',
+				default: 0,
+				description: 'Use 0 to set max limit of the model. Specifies the maximum number of tokens a language model can process at once, including both the input query and retrieved chunks, ensuring the model operates within its token limit.',
 			},
 			{
 				displayName: 'Max New Tokens',
-				name: 'max_new_tokens',
-				// eslint-disable-next-line n8n-nodes-base/node-param-type-options-password-missing
-				type: 'string',
-				default: '0',
-				required: true,
-				description: 'Maximum number of tokens to generate',
+				name: 'maxNewOutputLength',
+				type: 'number',
+				default: 0,
+				description: 'Use 0 to set dynamic response limit. Specifies the maximum number of tokens that the language model is allowed to generate in response to a query. This parameter controls the length of the model’s output, helping to prevent overly long or incomplete responses',
 			},
 			{
 				displayName: 'Seed',
 				name: 'seed',
 				type: 'string',
-				default: '784885',
-				required: true,
-				description: 'Seed value for reproducible outputs',
+				default: '',
+				description: 'Seed-help',
 			},
 			{
 				displayName: 'Quantization',
 				name: 'quantization',
-				type: 'string',
-				default: '--quantization',
-				required: true,
-				description: 'Enable quantized models for performance',
+				type: 'boolean',
+				default: false,
+				description: 'Whether to enable quantization is a technique that reduces the precision of model weights (e.g., from fp32 to int8) to decrease memory usage and improve inference speed. when enabled (true), the model uses less vram, making it suitable for resource-constrained environments, but might slightly affect output quality. when disabled (false), the model runs at full precision, ensuring maximum accuracy but requiring more gpu memory and running slower',
 			},
 			{
 				displayName: 'Do Sample',
 				name: 'do_sample',
-				type: 'string',
-				default: '--do_sample',
-				description: 'Whether to enable sampling randomness',
+				type: 'boolean',
+				default: false,
+				description: 'Whether to enable the do_sample parameter controls whether the model generates text deterministically or with randomness. for precise tasks like translations or code generation, set do_sample = false to ensure consistent and predictable outputs. for creative tasks like storytelling or poetry, set do_sample = true to allow the model to produce diverse and imaginative results',
 			},
 		],
 	};
@@ -229,48 +169,29 @@ export class RagChatYoutube implements INodeType {
 	async execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> {
 		const returnData: INodeExecutionData[] = [];
 
+		const selectedModel = this.getNodeParameter('selectedModel', 0, '') as string;
+		const selectedModelPrivate = this.getNodeParameter('selectedModelPrivate', 0, '') as string;
+		const websiteUrl = this.getNodeParameter('websiteUrl', 0, '') as string;
+		const prompt = this.getNodeParameter('prompt', 0) as string;
+		const user_id = this.getNodeParameter('user_id', 0, '') as string;
+		const session_id = this.getNodeParameter('session_id', 0, '') as string;
+		const system_prompt = this.getNodeParameter('system_prompt', 0, '') as string;
+		const temperature = this.getNodeParameter('temperature', 0, 0) as number;
+		const top_p = this.getNodeParameter('top_p', 0, 0) as number;
+		const top_k = this.getNodeParameter('top_k', 0, 0) as number;
+		const chunk_size = this.getNodeParameter('chunk_size', 0, 0) as number;
+		const chunk_overlap = this.getNodeParameter('chunk_overlap', 0, 0) as number;
+		const similarity_top_k = this.getNodeParameter('similarity_top_k', 0, 0) as number;
+		const context_window = this.getNodeParameter('context_window', 0, 0) as number;
+		const maxNewOutputLength = this.getNodeParameter('maxNewOutputLength', 0, 0) as number;
+		const seed = this.getNodeParameter('seed', 0, '') as string;
+		const quantization = this.getNodeParameter('quantization', 0, false) as boolean;
+		const do_sample = this.getNodeParameter('do_sample', 0, false) as boolean;
+
 		const credentials = await this.getCredentials('wiroApi');
 		const apiKey = credentials.apiKey as string;
 		const apiSecret = credentials.apiSecret as string;
 		const headers = generateWiroAuthHeaders(apiKey, apiSecret);
-
-		const websiteUrl = this.getNodeParameter('websiteUrl', 0) as string;
-		const prompt = this.getNodeParameter('prompt', 0) as string;
-		const user_id = this.getNodeParameter('user_id', 0, '') as string;
-		const session_id = this.getNodeParameter('session_id', 0, '') as string;
-		const system_prompt = this.getNodeParameter('system_prompt', 0) as string;
-		const selectedModel = this.getNodeParameter('selectedModel', 0) as string;
-		const temperature = this.getNodeParameter('temperature', 0) as string;
-		const top_p = this.getNodeParameter('top_p', 0) as string;
-		const top_k = this.getNodeParameter('top_k', 0) as string;
-		const chunk_size = this.getNodeParameter('chunk_size', 0) as string;
-		const chunk_overlap = this.getNodeParameter('chunk_overlap', 0) as string;
-		const similarity_top_k = this.getNodeParameter('similarity_top_k', 0) as string;
-		const context_window = this.getNodeParameter('context_window', 0) as string;
-		const max_new_tokens = this.getNodeParameter('max_new_tokens', 0) as string;
-		const seed = this.getNodeParameter('seed', 0) as string;
-		const quantization = this.getNodeParameter('quantization', 0, '') as string;
-		const do_sample = this.getNodeParameter('do_sample', 0, '') as string;
-
-		const body = {
-			websiteUrl,
-			prompt,
-			user_id,
-			session_id,
-			system_prompt,
-			selectedModel,
-			temperature,
-			top_p,
-			top_k,
-			chunk_size,
-			chunk_overlap,
-			similarity_top_k,
-			context_window,
-			max_new_tokens,
-			seed,
-			quantization,
-			do_sample,
-		};
 
 		const response = await this.helpers.request({
 			method: 'POST',
@@ -279,7 +200,26 @@ export class RagChatYoutube implements INodeType {
 				...headers,
 				'Content-Type': 'application/json',
 			},
-			body,
+			body: {
+				selectedModel,
+				selectedModelPrivate,
+				websiteUrl,
+				prompt,
+				user_id,
+				session_id,
+				system_prompt,
+				temperature,
+				top_p,
+				top_k,
+				chunk_size,
+				chunk_overlap,
+				similarity_top_k,
+				context_window,
+				max_new_tokens: maxNewOutputLength,
+				seed,
+				quantization,
+				do_sample,
+			},
 			json: true,
 		});
 
@@ -314,7 +254,10 @@ export class RagChatYoutube implements INodeType {
 				responseJSON.message = result ?? '';
 		}
 
-		returnData.push({ json: responseJSON });
+		returnData.push({
+			json: responseJSON,
+		});
+
 		return [returnData];
 	}
 }

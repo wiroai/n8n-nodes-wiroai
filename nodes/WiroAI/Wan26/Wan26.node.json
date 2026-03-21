@@ -1,0 +1,30 @@
+{
+	"node": "wan26",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create AI-generated videos with Wan 2.6. Transform text or images into dynamic video content. P",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Wan 2.6 Video Generation Model",
+		"Alibaba",
+		"Wan 2 6"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/alibaba/wan-2-6#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

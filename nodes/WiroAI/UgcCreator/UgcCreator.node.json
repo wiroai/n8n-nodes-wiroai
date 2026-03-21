@@ -1,0 +1,30 @@
+{
+	"node": "ugcCreator",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create engaging UGC videos for product ads using AI. Perfect for e-commerce and marketing teams",
+	"categories": [
+		"AI",
+		"Productivity",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"UGC Creator for Product Ads",
+		"Ugc Creator"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/ugc-creator#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"node": "hailuo23",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Experience the MiniMax Hailuo 2.3 API — optimized for cinematic precision, emotional depth, and",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"MiniMax Hailuo 2.3",
+		"Minimax",
+		"Hailuo 2 3"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/minimax/hailuo-2-3#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

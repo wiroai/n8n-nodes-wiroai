@@ -1,0 +1,31 @@
+{
+	"node": "virtualTryOn2",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Transform flat garments into lifelike models without a physical photoshoot. Integrate Wiro API",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Virtual Try-On V2",
+		"Virtual Try On V2"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/virtual-try-on-v2#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

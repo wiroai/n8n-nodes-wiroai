@@ -1,0 +1,31 @@
+{
+	"node": "nanoBananaPro",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Nano Banana Pro API docs with examples, integration steps, and pricing. Use Google’s Gemini 3 P",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Nano Banana Pro API: Create Mobile & Web Apps with Nano Banana",
+		"Google",
+		"Nano Banana Pro"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/google/nano-banana-pro#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

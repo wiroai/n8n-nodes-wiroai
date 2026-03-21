@@ -1,0 +1,30 @@
+{
+	"node": "hunyuanFluxSrpo",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "FLUX.1 SRPO [dev] is a 12 billion parameter flow transformer that generates high-quality images",
+	"categories": [
+		"AI",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Hunyuan Flux SRPO",
+		"Tencent",
+		"Hunyuan Flux Srpo"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/tencent/hunyuan-flux-srpo#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

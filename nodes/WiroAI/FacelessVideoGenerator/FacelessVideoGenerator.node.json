@@ -1,0 +1,30 @@
+{
+	"node": "facelessVideoGenerator",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Create professional short videos (30s) for YouTube Shorts, Instagram Reels, TikTok, and X (Twit",
+	"categories": [
+		"AI",
+		"Audio",
+		"Music",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Faceless Video Generator"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/faceless-video-generator#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

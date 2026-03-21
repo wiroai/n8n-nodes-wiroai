@@ -1,0 +1,31 @@
+{
+	"node": "seedream5Lite",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Use Seedream V5 Lite for AI-powered image generation. Transform images or create new ones from",
+	"categories": [
+		"AI",
+		"Editing",
+		"Image"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Seedream V5 Lite - Image-to-Image & Text-to-Image Generator",
+		"Bytedance",
+		"Seedream V5 Lite"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/bytedance/seedream-v5-lite#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}

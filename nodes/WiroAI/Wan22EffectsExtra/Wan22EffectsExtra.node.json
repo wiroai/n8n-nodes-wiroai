@@ -1,0 +1,29 @@
+{
+	"node": "wan22EffectsExtra",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"icon": "wiro.svg",
+	"description": "Generate avatars from photos and animate them into engaging videos in one seamless pipeline",
+	"categories": [
+		"AI",
+		"Video"
+	],
+	"alias": [
+		"Wiro",
+		"WiroAI",
+		"Wan2.2 Effects Extra",
+		"Wan2 2 Effects Extra"
+	],
+	"resources": {
+		"primaryDocumentation": [
+			{
+				"url": "https://wiro.ai/models/wiro/wan2-2-effects-extra#apisamples-curl"
+			}
+		],
+		"credentialDocumentation": [
+			{
+				"url": "https://wiro.ai/docs"
+			}
+		]
+	}
+}
