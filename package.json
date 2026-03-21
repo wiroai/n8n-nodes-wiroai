@@ -385,7 +385,6 @@
 		]
 	},
 	"devDependencies": {
-		"@n8n/eslint-plugin-community-nodes": "^0.9.0",
 		"@types/node": "^22.15.30",
 		"@typescript-eslint/parser": "~8.32.0",
 		"eslint": "^8.57.0",
