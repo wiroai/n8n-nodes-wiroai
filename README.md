@@ -52,7 +52,7 @@ Just include the API key — no signature required. Best for server-side applica
 4. In n8n, go to Credentials → Add new → **Wiro API**
 5. Select your auth method and enter your credentials
 
-See [Wiro Authentication Docs](https://wiro.ai/docs/#/authentication) for details.
+See [Wiro Authentication Docs](https://wiro.ai/docs/authentication) for details.
 
 ---
 

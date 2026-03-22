@@ -8,7 +8,7 @@ import {
 export class WiroApi implements ICredentialType {
 	name = 'wiroApi';
 	displayName = 'Wiro API';
-	documentationUrl = 'https://wiro.ai/docs';
+	documentationUrl = 'https://wiro.ai/docs/authentication';
 
 	properties: INodeProperties[] = [
 		{
