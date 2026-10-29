@@ -1,9 +1,6 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://wiro.ai/images/logos/logo/logo-white.png">
-  <img src="https://wiro.ai/images/logos/logo/logo-black.png" alt="Wiro AI" width="180">
-</picture>
+<img src="https://wiro.ai/images/favicon/icon-512x512.png" alt="Wiro AI" width="100">
 
 # n8n-nodes-wiroai: Wiro AI Nodes for n8n
 
